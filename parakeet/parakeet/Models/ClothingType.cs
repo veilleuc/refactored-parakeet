@@ -10,8 +10,8 @@ namespace parakeet.Models
         public int ClothingTypeId { get; set; }
         public string type { get; set; }
 
-        public String UserId { get; set; }
+        public float price { get; set; }
 
-        public virtual ApplicationUser ApplicationUser { get; set; }
+        
     }
 }
