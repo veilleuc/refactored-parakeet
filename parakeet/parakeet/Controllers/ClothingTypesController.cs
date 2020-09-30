@@ -20,8 +20,9 @@ namespace parakeet.Controllers
             _context = context;
         }
 
-        // GET: ClothingTypes
-        [Authorize(Roles = "SuperAdmin")]
+        // THIS Authorize() CAN BE USED TO MAKE SURE THAT A LOGGED IN USER HAS RIGHT ROLE TO ACCESS THE PAGE
+        // THIS IS EXAMPLE WHERE ONLY A USER WITH Admin ROLE CAN ACCESS ANY OF THE CLOTHING TYPE PAGES
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Index()
         {
             return View(await _context.ClothingTypes.ToListAsync());

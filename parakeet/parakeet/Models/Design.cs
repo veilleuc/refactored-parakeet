@@ -6,20 +6,24 @@ using System.Threading.Tasks;
 
 namespace parakeet.Models
 {
+    // CAN SEED THE DB WITH DESIGNS BY USING EXAMPLE FORMAT FOUND IN ApplicationDBContext.cs
     public class Design
     {
         public int DesignId { get; set; }
 
+        // image that has been converted to byte array
         public byte[] DesignArray { get; set; }
 
         public string DesignName { get; set; }
 
         public int Popularitycounter { get; set; }
 
-        public bool Approved { get; set; }
+        // makes these optional (?) for time being so that images can be viewed without approval
+        public bool? Approved { get; set; }
 
-        public bool AdminViewed { get; set; }
+        public bool? AdminViewed { get; set; }
 
+        // filter tags
         public bool NatureTag { get; set; }
 
         public bool FunnyTag { get; set; }

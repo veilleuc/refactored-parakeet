@@ -20,9 +20,10 @@ namespace parakeet.Data
 
         public DbSet<OrderHistory> orderHistories { get; set; }
 
-
+        // SCROLL DOWN TO SEE EXAMPLE OF HOW TO SEED DATABASE
         protected override void OnModelCreating(ModelBuilder builder)
         {
+
             base.OnModelCreating(builder);
             builder.HasDefaultSchema("Identity");
             builder.Entity<IdentityUser>(entity =>
@@ -54,6 +55,9 @@ namespace parakeet.Data
                 entity.ToTable("UserTokens");
             });
 
+            //  THIS IS HOW YOU SEED DATABASE. THIS IS FOR CLOTHINGTYPE SEED.
+            // IF YOU NEED TO SEED DATABASE USE THIS FORMAT
+            // PLEASE BE MINDFUL TO ADD ALL ATTRIBUTES FOR A ROW 
             builder.Entity<ClothingType>().HasData(
         new ClothingType
         {

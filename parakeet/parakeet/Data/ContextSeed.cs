@@ -19,7 +19,7 @@ namespace parakeet.Data
         }
         public static async Task SeedSuperAdminAsync(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager)
         {
-            //Seed Default User
+            //Seed Default admin User
             var defaultUser = new ApplicationUser
             {
                 UserName = "admin",
