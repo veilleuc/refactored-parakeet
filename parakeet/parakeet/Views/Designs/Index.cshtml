@@ -1,0 +1,107 @@
+﻿@model IEnumerable<parakeet.Models.Design>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DesignArray)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DesignName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Popularitycounter)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Approved)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AdminViewed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NatureTag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FunnyTag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AbstractTag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GameTag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MusicTag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MovieTag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CoolTag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserId)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DesignArray)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DesignName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Popularitycounter)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Approved)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdminViewed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NatureTag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FunnyTag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AbstractTag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GameTag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MusicTag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MovieTag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CoolTag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.DesignId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.DesignId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.DesignId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

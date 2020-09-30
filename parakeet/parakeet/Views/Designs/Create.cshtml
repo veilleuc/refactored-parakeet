@@ -1,0 +1,93 @@
+﻿@model parakeet.Models.Design
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Design</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="DesignArray" class="control-label"></label>
+                <input asp-for="DesignArray" class="form-control" />
+                <span asp-validation-for="DesignArray" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DesignName" class="control-label"></label>
+                <input asp-for="DesignName" class="form-control" />
+                <span asp-validation-for="DesignName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Popularitycounter" class="control-label"></label>
+                <input asp-for="Popularitycounter" class="form-control" />
+                <span asp-validation-for="Popularitycounter" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Approved" class="control-label"></label>
+                <input asp-for="Approved" class="form-control" />
+                <span asp-validation-for="Approved" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AdminViewed" class="control-label"></label>
+                <input asp-for="AdminViewed" class="form-control" />
+                <span asp-validation-for="AdminViewed" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="NatureTag" /> @Html.DisplayNameFor(model => model.NatureTag)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="FunnyTag" /> @Html.DisplayNameFor(model => model.FunnyTag)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="AbstractTag" /> @Html.DisplayNameFor(model => model.AbstractTag)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="GameTag" /> @Html.DisplayNameFor(model => model.GameTag)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="MusicTag" /> @Html.DisplayNameFor(model => model.MusicTag)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="MovieTag" /> @Html.DisplayNameFor(model => model.MovieTag)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="CoolTag" /> @Html.DisplayNameFor(model => model.CoolTag)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserId" class="control-label"></label>
+                <input asp-for="UserId" class="form-control" />
+                <span asp-validation-for="UserId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
