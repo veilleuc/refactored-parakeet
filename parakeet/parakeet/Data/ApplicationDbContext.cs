@@ -16,6 +16,7 @@ namespace parakeet.Data
         }
 
         public DbSet<ClothingType> ClothingTypes { get; set; }
+        public DbSet<Design> Designs { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
