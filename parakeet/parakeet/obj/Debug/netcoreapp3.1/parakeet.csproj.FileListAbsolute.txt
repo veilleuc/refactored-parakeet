@@ -487,3 +487,8 @@ C:\Users\jdogg\csci540_proj\refactored-parakeet\parakeet\parakeet\bin\Debug\netc
 C:\Users\jdogg\csci540_proj\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\parakeet.csproj.CoreCompileInputs.cache
 C:\Users\jdogg\csci540_proj\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\parakeet.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\jdogg\csci540_proj\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\parakeet.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\jdogg\csci540_proj\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\ClothingTypes\Create.cshtml.g.cs
+C:\Users\jdogg\csci540_proj\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\ClothingTypes\Delete.cshtml.g.cs
+C:\Users\jdogg\csci540_proj\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\ClothingTypes\Details.cshtml.g.cs
+C:\Users\jdogg\csci540_proj\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\ClothingTypes\Edit.cshtml.g.cs
+C:\Users\jdogg\csci540_proj\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\ClothingTypes\Index.cshtml.g.cs

@@ -48,6 +48,33 @@ namespace parakeet.Data
             {
                 entity.ToTable("UserTokens");
             });
+
+            builder.Entity<ClothingType>().HasData(
+        new ClothingType
+        {
+            ClothingTypeId = 1,
+            type = "Short Sleeve Shirt",
+            price = 20.0f
+        },
+        new ClothingType
+        {
+            ClothingTypeId = 2,
+            type = "Long Sleeve Shirt",
+            price = 35.0f
+        },
+        new ClothingType
+        {
+            ClothingTypeId = 3,
+            type = "Jacket",
+            price = 50.0f
+        },
+        new ClothingType
+        {
+            ClothingTypeId = 4,
+            type = "Hoodie",
+            price = 40.0f
+        }
+    ) ;
         }
     }
 }
