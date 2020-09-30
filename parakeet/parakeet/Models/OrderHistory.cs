@@ -13,6 +13,12 @@ namespace parakeet.Models
 
         public int ClothingTypeId { get; set; }
 
+        public int DesignId { get; set; }
+
+        
+        public virtual ApplicationUser ApplicationUser { get; set; }
         public virtual ClothingType ClothingType { get; set; }
+
+        public virtual Design Design { get; set; }
     }
 }
