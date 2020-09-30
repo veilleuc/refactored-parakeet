@@ -15,10 +15,13 @@ namespace parakeet.Data
         {
         }
 
+        // this is how you add a model to the database
         public DbSet<ClothingType> ClothingTypes { get; set; }
         public DbSet<Design> Designs { get; set; }
 
         public DbSet<OrderHistory> orderHistories { get; set; }
+
+        public DbSet<Review> Reviews { get; set; }
 
         // SCROLL DOWN TO SEE EXAMPLE OF HOW TO SEED DATABASE
         protected override void OnModelCreating(ModelBuilder builder)
