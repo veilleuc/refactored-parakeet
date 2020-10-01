@@ -8,16 +8,20 @@ using Microsoft.EntityFrameworkCore;
 using parakeet.Data;
 using parakeet.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 
 namespace parakeet.Controllers
 {
+ 
     public class OrderHistoriesController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly UserManager<ApplicationUser> _userManager;
 
-        public OrderHistoriesController(ApplicationDbContext context)
+        public OrderHistoriesController(ApplicationDbContext context, UserManager<ApplicationUser> userManager)
         {
             _context = context;
+            _userManager = userManager;
         }
 
         // GET: OrderHistories
@@ -29,7 +33,7 @@ namespace parakeet.Controllers
 
         // GET: OrderHistories/Details/5
         public async Task<IActionResult> Details(int? id)
-        {
+        {   
             if (id == null)
             {
                 return NotFound();
@@ -74,6 +78,7 @@ namespace parakeet.Controllers
             ViewData["DesignId"] = new SelectList(_context.Designs, "DesignId", "DesignId", orderHistory.DesignId);
             return View(orderHistory);
         }
+
         [Authorize(Roles = "Admin")]
         // GET: OrderHistories/Edit/5
         public async Task<IActionResult> Edit(int? id)
