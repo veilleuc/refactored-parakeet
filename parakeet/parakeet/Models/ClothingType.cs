@@ -14,6 +14,7 @@ namespace parakeet.Models
         [Display(Name = "Clothing Type")]
         public string type { get; set; }
 
+        [Display(Name = "Price")]
         public float price { get; set; }
 
         
