@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using parakeet.Data;
 using parakeet.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace parakeet.Controllers
 {
@@ -46,17 +47,19 @@ namespace parakeet.Controllers
             return View(orderHistory);
         }
 
+        [Authorize(Roles = "Admin")]
         // GET: OrderHistories/Create
         public IActionResult Create()
         {
             ViewData["ClothingTypeId"] = new SelectList(_context.ClothingTypes, "ClothingTypeId", "type");
-            ViewData["DesignId"] = new SelectList(_context.Designs, "DesignId", "DesignId");
+            ViewData["DesignId"] = new SelectList(_context.Designs, "DesignId", "DesignName");
             return View();
         }
 
         // POST: OrderHistories/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("OrderHistoryId,OrderDate,ClothingTypeId,DesignId")] OrderHistory orderHistory)
@@ -71,7 +74,7 @@ namespace parakeet.Controllers
             ViewData["DesignId"] = new SelectList(_context.Designs, "DesignId", "DesignId", orderHistory.DesignId);
             return View(orderHistory);
         }
-
+        [Authorize(Roles = "Admin")]
         // GET: OrderHistories/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -126,7 +129,8 @@ namespace parakeet.Controllers
             ViewData["DesignId"] = new SelectList(_context.Designs, "DesignId", "DesignId", orderHistory.DesignId);
             return View(orderHistory);
         }
-
+        
+        [Authorize(Roles = "Admin")]
         // GET: OrderHistories/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
@@ -146,7 +150,8 @@ namespace parakeet.Controllers
 
             return View(orderHistory);
         }
-
+        
+        [Authorize(Roles = "Admin")]
         // POST: OrderHistories/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]

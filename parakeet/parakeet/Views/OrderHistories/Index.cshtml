@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<parakeet.Models.OrderHistory>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Order History";
 }
 
 <h1>Index</h1>
@@ -16,10 +16,10 @@
                 @Html.DisplayNameFor(model => model.OrderDate)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ClothingType)
+                @Html.DisplayNameFor(model => model.ClothingType.type)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Design)
+                @Html.DisplayNameFor(model => model.Design.DesignName)
             </th>
             <th></th>
         </tr>
@@ -31,10 +31,10 @@
                 @Html.DisplayFor(modelItem => item.OrderDate)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ClothingType.ClothingTypeId)
+                @Html.DisplayFor(modelItem => item.ClothingType.type)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Design.DesignId)
+                @Html.DisplayFor(modelItem => item.Design.DesignName)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.OrderHistoryId">Edit</a> |

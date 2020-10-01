@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel;
 
 namespace parakeet.Models
 {
@@ -9,6 +11,7 @@ namespace parakeet.Models
     public class ClothingType
     {
         public int ClothingTypeId { get; set; }
+        [Display(Name = "Clothing Type")]
         public string type { get; set; }
 
         public float price { get; set; }

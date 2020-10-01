@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace parakeet.Models
 {
@@ -14,6 +15,7 @@ namespace parakeet.Models
         // image that has been converted to byte array
         public byte[] DesignArray { get; set; }
 
+        [Display(Name = "Design")]
         public string DesignName { get; set; }
 
         public int Popularitycounter { get; set; }

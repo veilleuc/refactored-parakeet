@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
+
 
 namespace parakeet.Models
 {
@@ -9,7 +11,9 @@ namespace parakeet.Models
     {
         public int OrderHistoryId { get; set; }
 
+        [Display(Name = "Order Date")]
         public DateTime OrderDate { get; set; }
+
 
         public int ClothingTypeId { get; set; }
 

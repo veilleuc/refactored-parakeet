@@ -17,16 +17,16 @@
             @Html.DisplayFor(model => model.OrderDate)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ClothingType)
+            @Html.DisplayNameFor(model => model.ClothingType.type)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ClothingType.ClothingTypeId)
+            @Html.DisplayFor(model => model.ClothingType.type)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Design)
+            @Html.DisplayNameFor(model => model.Design.DesignName)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Design.DesignId)
+            @Html.DisplayFor(model => model.Design.DesignName)
         </dd>
     </dl>
 </div>
