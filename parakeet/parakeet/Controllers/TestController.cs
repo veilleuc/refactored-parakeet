@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace parakeet.Controllers
 {
+
+    // THIS CONTROLLER CAN BE USED FOR TESTING IDEAS OR LAYOUTS WITHOUT MESSING WITH PRODUCTION CONTROLLERS
     public class TestController : Controller
     {
         // GET: TestController
