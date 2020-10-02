@@ -17,9 +17,13 @@ namespace parakeet.Data
 
         // this is how you add a model to the database
         public DbSet<ClothingType> ClothingTypes { get; set; }
+
+        public DbSet <Size> Sizes { get; set; }
         public DbSet<Design> Designs { get; set; }
 
         public DbSet<OrderHistory> orderHistories { get; set; }
+
+        public DbSet<OrderItemHistory> orderItemHistories { get; set; }
 
         public DbSet<Review> Reviews { get; set; }
 
@@ -87,6 +91,42 @@ namespace parakeet.Data
             price = 40.0f
         }
     ) ;
+            // SEED SIZE TABLE WITH SIZES
+
+            builder.Entity<Size>().HasData(
+
+                new Size
+                {
+                    SizeId = 1,
+                    SizeName = "XS"
+                },
+                new Size
+                {
+                    SizeId = 2,
+                    SizeName = "S"
+                },
+                new Size
+                {
+                    SizeId = 3,
+                    SizeName = "M"
+                },
+                new Size
+                {
+                    SizeId = 4,
+                    SizeName = "L"
+                },
+                new Size
+                {
+                    SizeId = 5,
+                    SizeName = "XL"
+                },
+                new Size
+                {
+                    SizeId = 6,
+                    SizeName = "XXL"
+                }
+
+                );
         }
     }
 }

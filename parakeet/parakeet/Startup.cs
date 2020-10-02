@@ -30,7 +30,7 @@ namespace parakeet
         {
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
-                    Configuration.GetConnectionString("CharlesConnection")));
+                    Configuration.GetConnectionString("JaredConnection")));
             services.AddIdentity<ApplicationUser, IdentityRole>()
             .AddEntityFrameworkStores<ApplicationDbContext>()
             .AddDefaultUI()
