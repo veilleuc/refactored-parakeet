@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using parakeet.Data;
 using parakeet.Models;
 
 namespace parakeet.Controllers
@@ -13,16 +14,26 @@ namespace parakeet.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private readonly ApplicationDbContext _context;
+        public HomeController(ILogger<HomeController> logger, ApplicationDbContext context)
         {
+            _context = context;
             _logger = logger;
         }
 
         
         public IActionResult Index()
         {
-            return View();
+            Design[] designs = _context.Designs.ToArray();
+
+            // sort the designs by popularity
+            // this will sort them from lowest to highest so must get last 5 designs
+
+            Array.Sort(designs, delegate (Design d1, Design d2) {
+                return d1.Popularitycounter.CompareTo(d2.Popularitycounter);
+            });
+
+            return View(designs);
         }
 
         public IActionResult Privacy()
