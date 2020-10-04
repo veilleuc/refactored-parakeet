@@ -14,15 +14,8 @@ namespace parakeet.Models
         [Display(Name = "Order Date")]
         public DateTime OrderDate { get; set; }
 
-
-        public int ClothingTypeId { get; set; }
-
-        public int DesignId { get; set; }
-
         
         public virtual ApplicationUser ApplicationUser { get; set; }
-        public virtual ClothingType ClothingType { get; set; }
-
-        public virtual Design Design { get; set; }
+       
     }
 }
