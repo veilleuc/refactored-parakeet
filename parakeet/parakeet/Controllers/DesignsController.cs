@@ -1,7 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -10,12 +14,22 @@ using parakeet.Models;
 
 namespace parakeet.Controllers
 {
-    public class DesignsController : Controller
-    {
+    public class DesignsController : Controller { 
+
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly SignInManager<ApplicationUser> _signInManager;
+    
         private readonly ApplicationDbContext _context;
 
-        public DesignsController(ApplicationDbContext context)
+        public DesignsController(ApplicationDbContext context, UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager)
         {
+            // initialize variables
+
+            // for User identity access
+            _userManager = userManager;
+            _signInManager = signInManager;
+
+            // for DB access
             _context = context;
         }
 
@@ -43,9 +57,11 @@ namespace parakeet.Controllers
             return View(design);
         }
 
+        [Authorize(Roles = "Admin")]
         // GET: Designs/Create
         public IActionResult Create()
         {
+
             return View();
         }
 
@@ -54,15 +70,44 @@ namespace parakeet.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("DesignId,DesignArray,DesignName,Popularitycounter,Approved,AdminViewed,NatureTag,FunnyTag,AbstractTag,GameTag,MusicTag,MovieTag,CoolTag,UserId")] Design design)
+        public async Task<IActionResult> Create([Bind("DesignId,DesignArray,DesignName,Popularitycounter,Approved,AdminViewed,NatureTag,FunnyTag,AbstractTag,GameTag,MusicTag,MovieTag,CoolTag,UserId")] DesignViewModel designview)
         {
+            // add _usermanager and get user id to save image to DB.
             if (ModelState.IsValid)
             {
+                Design design = new Design
+                {
+                    DesignName = designview.DesignName,
+                    Popularitycounter = designview.Popularitycounter,
+                    Approved = designview.Approved,
+                    AdminViewed = designview.AdminViewed,
+                    AbstractTag = designview.AbstractTag,
+                    CoolTag = designview.CoolTag,
+                    FunnyTag = designview.FunnyTag,
+                    GameTag = designview.GameTag,
+                    MovieTag = designview.MovieTag,
+                    MusicTag = designview.MusicTag,
+                    NatureTag = designview.NatureTag,
+                    
+                };
+                
+
+                IFormFile file = designview.DesignArray;
+                using (var dataStream = new MemoryStream())
+                {
+                    await file.CopyToAsync(dataStream);
+                    design.DesignArray = dataStream.ToArray();
+                }
+
+                // assign user to the design
+                design.ApplicationUser = await _userManager.GetUserAsync(User);
+                
+                // add design to table
                 _context.Add(design);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(design);
+            return View(designview);
         }
 
         // GET: Designs/Edit/5

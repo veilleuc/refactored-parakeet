@@ -1,4 +1,4 @@
-﻿@model parakeet.Models.Design
+﻿@model parakeet.Models.DesignViewModel
 
 @{
     ViewData["Title"] = "Create";
@@ -10,11 +10,16 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Create">
+        <form asp-action="Create" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="DesignArray" class="control-label"></label>
-                <input asp-for="DesignArray" class="form-control" />
+                <input type="file"
+                       accept=".png,.jpg,.jpeg"
+                       asp-for="DesignArray"
+                       class="form-control"
+                       style="border:0px!important;padding: 0px;padding-top: 10px;padding-bottom: 30px;"
+                        />
                 <span asp-validation-for="DesignArray" class="text-danger"></span>
             </div>
             <div class="form-group">
