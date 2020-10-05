@@ -72,7 +72,7 @@ namespace parakeet.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("DesignId,DesignArray,DesignName,Popularitycounter,Approved,AdminViewed,NatureTag,FunnyTag,AbstractTag,GameTag,MusicTag,MovieTag,CoolTag,UserId")] DesignViewModel designview)
         {
-            // add _usermanager and get user id to save image to DB.
+            // convert Design view to a Designs obj
             if (ModelState.IsValid)
             {
                 Design design = new Design
@@ -91,7 +91,7 @@ namespace parakeet.Controllers
                     
                 };
                 
-
+                // convert image to a Byte Array
                 IFormFile file = designview.DesignArray;
                 using (var dataStream = new MemoryStream())
                 {
@@ -105,6 +105,8 @@ namespace parakeet.Controllers
                 // add design to table
                 _context.Add(design);
                 await _context.SaveChangesAsync();
+
+                // redirect back to designs index page
                 return RedirectToAction(nameof(Index));
             }
             return View(designview);
