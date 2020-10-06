@@ -1,0 +1,53 @@
+﻿@model IEnumerable<parakeet.Models.OrderItemHistory>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.OrderHistory)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Design)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClothingType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Size)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderHistory.OrderHistoryId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Design.DesignId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClothingType.ClothingTypeId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Size.SizeId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.OrderItemHistoryId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.OrderItemHistoryId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.OrderItemHistoryId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,49 @@
+﻿@model parakeet.Models.OrderItemHistory
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>OrderItemHistory</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="OrderItemHistoryId" />
+            <div class="form-group">
+                <label asp-for="OrderHistoryId" class="control-label"></label>
+                <select asp-for="OrderHistoryId" class="form-control" asp-items="ViewBag.OrderHistoryId"></select>
+                <span asp-validation-for="OrderHistoryId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DesignId" class="control-label"></label>
+                <select asp-for="DesignId" class="form-control" asp-items="ViewBag.DesignId"></select>
+                <span asp-validation-for="DesignId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ClothingTypeId" class="control-label"></label>
+                <select asp-for="ClothingTypeId" class="form-control" asp-items="ViewBag.ClothingTypeId"></select>
+                <span asp-validation-for="ClothingTypeId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SizeId" class="control-label"></label>
+                <select asp-for="SizeId" class="form-control" asp-items="ViewBag.SizeId"></select>
+                <span asp-validation-for="SizeId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
