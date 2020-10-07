@@ -46,6 +46,11 @@ namespace parakeet.Controllers
 
             var orderHistory = await _context.orderHistories
                 .FirstOrDefaultAsync(m => m.OrderHistoryId == id);
+
+            // print all records from orderItemHistory that 
+
+
+
             if (orderHistory == null)
             {
                 return NotFound();
@@ -67,8 +72,11 @@ namespace parakeet.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("OrderHistoryId,OrderDate")] OrderHistory orderHistory)
         {
+
             if (ModelState.IsValid)
             {
+                //assign user to the order
+                orderHistory.ApplicationUser = await _userManager.GetUserAsync(User);
                 _context.Add(orderHistory);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));

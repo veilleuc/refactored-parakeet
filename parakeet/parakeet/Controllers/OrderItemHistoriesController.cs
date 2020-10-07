@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using parakeet.Data;
@@ -12,11 +13,17 @@ namespace parakeet.Controllers
 {
     public class OrderItemHistoriesController : Controller
     {
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly ApplicationDbContext _context;
 
-        public OrderItemHistoriesController(ApplicationDbContext context)
+        public OrderItemHistoriesController(ApplicationDbContext context, UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager)
         {
             _context = context;
+
+            // for User identity access
+            _userManager = userManager;
+            _signInManager = signInManager;
         }
 
         // GET: OrderItemHistories
