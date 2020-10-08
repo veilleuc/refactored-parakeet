@@ -9253,20 +9253,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\aceun\\.nuget\\packages\\": {}
+    "C:\\Users\\jdogg\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\aceun\\github\\refactored-parakeet\\parakeet\\parakeet\\parakeet.csproj",
+      "projectUniqueName": "C:\\Users\\jdogg\\csci540_proj\\refactored-parakeet\\parakeet\\parakeet\\parakeet.csproj",
       "projectName": "parakeet",
-      "projectPath": "C:\\Users\\aceun\\github\\refactored-parakeet\\parakeet\\parakeet\\parakeet.csproj",
-      "packagesPath": "C:\\Users\\aceun\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\aceun\\github\\refactored-parakeet\\parakeet\\parakeet\\obj\\",
+      "projectPath": "C:\\Users\\jdogg\\csci540_proj\\refactored-parakeet\\parakeet\\parakeet\\parakeet.csproj",
+      "packagesPath": "C:\\Users\\jdogg\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jdogg\\csci540_proj\\refactored-parakeet\\parakeet\\parakeet\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\aceun\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\jdogg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -9340,7 +9345,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

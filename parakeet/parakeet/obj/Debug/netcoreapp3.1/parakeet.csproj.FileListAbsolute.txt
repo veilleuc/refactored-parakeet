@@ -1012,3 +1012,8 @@ C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp
 C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\OrderItemHistories\Details.cshtml.g.cs
 C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\OrderItemHistories\Edit.cshtml.g.cs
 C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\OrderItemHistories\Index.cshtml.g.cs
+C:\Users\jdogg\csci540_proj\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\OrderItemHistories\Create.cshtml.g.cs
+C:\Users\jdogg\csci540_proj\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\OrderItemHistories\Delete.cshtml.g.cs
+C:\Users\jdogg\csci540_proj\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\OrderItemHistories\Details.cshtml.g.cs
+C:\Users\jdogg\csci540_proj\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\OrderItemHistories\Edit.cshtml.g.cs
+C:\Users\jdogg\csci540_proj\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\OrderItemHistories\Index.cshtml.g.cs
