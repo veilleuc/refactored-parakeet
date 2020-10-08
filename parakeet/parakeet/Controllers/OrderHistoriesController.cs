@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
 using parakeet.Data;
 using parakeet.Models;
@@ -31,12 +32,14 @@ namespace parakeet.Controllers
         }
 
         // GET: OrderHistories
+        [Authorize(Roles = "Admin, Basic")]
         public async Task<IActionResult> Index()
         {
             return View(await _context.orderHistories.ToListAsync());
         }
 
         // GET: OrderHistories/Details/5
+        [Authorize(Roles = "Admin, Basic")]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
