@@ -14,6 +14,7 @@ namespace parakeet.Models
         [Display(Name = "Order Date")]
         public DateTime OrderDate { get; set; }
 
+        public virtual ICollection<OrderItemHistory> OrderItemHistory { get; set; }
         
         public virtual ApplicationUser ApplicationUser { get; set; }
        
