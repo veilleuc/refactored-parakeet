@@ -35,6 +35,10 @@ namespace parakeet.Controllers
         [Authorize(Roles = "Admin, Basic")]
         public async Task<IActionResult> Index()
         {
+            var currentUser = await _userManager.GetUserAsync(User);
+            if (currentUser == null) 
+                return Challenge();
+
             return View(await _context.orderHistories.ToListAsync());
         }
 
@@ -46,8 +50,8 @@ namespace parakeet.Controllers
             {
                 return NotFound();
             }
-
-            var orderHistory = await _context.orderHistories
+            
+            var orderHistory = await _context.orderHistories.Include(c => c.OrderItemHistory)
                 .FirstOrDefaultAsync(m => m.OrderHistoryId == id);
 
             // print all records from orderItemHistory that 
@@ -75,7 +79,8 @@ namespace parakeet.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("OrderHistoryId,OrderDate")] OrderHistory orderHistory)
         {
-
+            
+            
             if (ModelState.IsValid)
             {
                 //assign user to the order
