@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using parakeet.Data;
 using parakeet.Models;
+using Microsoft.EntityFrameworkCore.Internal;
 
 namespace parakeet.Controllers
 {
@@ -53,10 +54,6 @@ namespace parakeet.Controllers
             
             var orderHistory = await _context.orderHistories.Include(c => c.OrderItemHistory)
                 .FirstOrDefaultAsync(m => m.OrderHistoryId == id);
-
-            // print all records from orderItemHistory that 
-
-
 
             if (orderHistory == null)
             {

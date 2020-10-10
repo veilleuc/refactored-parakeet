@@ -13,16 +13,16 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.OrderHistory)
+                Order ID
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Design)
+                Design ID 
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ClothingType)
+                Clothing Type 
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Size)
+                Size
             </th>
             <th></th>
         </tr>
@@ -37,10 +37,10 @@
                 @Html.DisplayFor(modelItem => item.Design.DesignId)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ClothingType.ClothingTypeId)
+                @Html.DisplayFor(modelItem => item.ClothingType.type)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Size.SizeId)
+                @Html.DisplayFor(modelItem => item.Size.SizeName)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.OrderItemHistoryId">Edit</a> |

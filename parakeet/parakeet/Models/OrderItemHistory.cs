@@ -24,7 +24,5 @@ namespace parakeet.Models
         public virtual ClothingType ClothingType { get; set; }
 
         public virtual Size Size { get; set; }
-
-
     }
 }
