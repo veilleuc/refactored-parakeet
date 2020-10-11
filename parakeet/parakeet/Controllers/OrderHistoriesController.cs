@@ -40,7 +40,7 @@ namespace parakeet.Controllers
             if (currentUser == null) 
                 return Challenge();
 
-            return View(await _context.orderHistories.ToListAsync());
+            return View(await _context.orderHistories.Where(c => c.ApplicationUser == currentUser).ToListAsync());
         }
 
         // GET: OrderHistories/Details/5
@@ -52,9 +52,12 @@ namespace parakeet.Controllers
                 return NotFound();
             }
             
-            var orderHistory = await _context.orderHistories.Include(c => c.OrderItemHistory)
+            var orderHistory = await _context.orderHistories
+                .Include(c => c.OrderItemHistory)
+                    .ThenInclude(c => c.Size)
+                .Include(c => c.OrderItemHistory)
+                    .ThenInclude(c => c.ClothingType)
                 .FirstOrDefaultAsync(m => m.OrderHistoryId == id);
-
             if (orderHistory == null)
             {
                 return NotFound();

@@ -46,6 +46,7 @@
     <tbody>
 @foreach (var item in Model.OrderItemHistory) {
         <tr>
+           
             <td>
                 @Html.DisplayFor(modelItem => item.OrderItemHistoryId)
             </td>
@@ -53,10 +54,10 @@
                 @Html.DisplayFor(modelItem => item.DesignId)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ClothingTypeId)
+                @Html.DisplayFor(modelItem => item.ClothingType.type)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.SizeId)
+                @Html.DisplayFor(modelItem => item.Size.SizeName)
             </td>
         </tr>
 }

@@ -11,6 +11,7 @@ namespace parakeet.Models
     public class ClothingType
     {
         public int ClothingTypeId { get; set; }
+
         [Display(Name = "Clothing Type")]
         public string type { get; set; }
 
