@@ -77,39 +77,47 @@
 
 <div> <p><br /></p></div>
 
-<div class="container">
-    <div class="text-center">
-        <div class="btn-group-toggle" data-toggle="buttons">
-            <label class="btn btn-outline-info mr-3">
-                <input type="radio" name="options" id="option1" autocomplete="off" style="color:darkorange">
-                <img id="profilePicture" style="width:150px;height:160px; object-fit:cover" src="data:image/*;base64,@(Convert.ToBase64String(Model[Model.Length-1].DesignArray))">
-            </label>
 
-            <label class="btn btn-outline-info mr-3">
-                <input type="radio" name="options" id="option2" autocomplete="off" style="color:darkorange">
-                <img id="profilePicture" style="width:150px;height:160px; object-fit:cover" src="data:image/*;base64,@(Convert.ToBase64String(Model[Model.Length-2].DesignArray))">
-            </label>
+@if (Model == null || Model.Length < 5)
+{
+    <h1 style=" font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif" class="font-weight-bold  text-center">There are less than 5 designs and cannot display</h1>
+}
+else
+{
+    <div class="container">
+        <div class="text-center">
+            <div class="btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-outline-info mr-3">
+                    <input type="radio" name="options" id="option1" autocomplete="off" style="color:darkorange">
+                    <img id="profilePicture" style="width:150px;height:160px; object-fit:cover" src="data:image/*;base64,@(Convert.ToBase64String(Model[Model.Length - 1].DesignArray))">
+                </label>
 
-            <label class="btn btn-outline-info mr-3">
-                <input type="radio" name="options" id="option3" autocomplete="off" style="color:darkorange">
-                <img id="profilePicture" style="width:150px;height:160px; object-fit:cover" src="data:image/*;base64,@(Convert.ToBase64String(Model[Model.Length-3].DesignArray))">
-            </label>
+                <label class="btn btn-outline-info mr-3">
+                    <input type="radio" name="options" id="option2" autocomplete="off" style="color:darkorange">
+                    <img id="profilePicture" style="width:150px;height:160px; object-fit:cover" src="data:image/*;base64,@(Convert.ToBase64String(Model[Model.Length - 2].DesignArray))">
+                </label>
 
-            <label class="btn btn-outline-info mr-3">
-                <input type="radio" name="options" id="option4" autocomplete="off" style="color:darkorange">
-                <img id="profilePicture" style="width:150px;height:160px; object-fit:cover" src="data:image/*;base64,@(Convert.ToBase64String(Model[Model.Length-4].DesignArray))">
-            </label>
+                <label class="btn btn-outline-info mr-3">
+                    <input type="radio" name="options" id="option3" autocomplete="off" style="color:darkorange">
+                    <img id="profilePicture" style="width:150px;height:160px; object-fit:cover" src="data:image/*;base64,@(Convert.ToBase64String(Model[Model.Length - 3].DesignArray))">
+                </label>
 
-            <label class="btn btn-outline-info mr-3">
-                <input type="radio" name="options" id="option5" autocomplete="off" style="color:darkorange">
-                <img id="profilePicture" style="width:150px;height:160px; object-fit:cover" src="data:image/*;base64,@(Convert.ToBase64String(Model[Model.Length-5].DesignArray))">
-            </label>
+                <label class="btn btn-outline-info mr-3">
+                    <input type="radio" name="options" id="option4" autocomplete="off" style="color:darkorange">
+                    <img id="profilePicture" style="width:150px;height:160px; object-fit:cover" src="data:image/*;base64,@(Convert.ToBase64String(Model[Model.Length - 4].DesignArray))">
+                </label>
+
+                <label class="btn btn-outline-info mr-3">
+                    <input type="radio" name="options" id="option5" autocomplete="off" style="color:darkorange">
+                    <img id="profilePicture" style="width:150px;height:160px; object-fit:cover" src="data:image/*;base64,@(Convert.ToBase64String(Model[Model.Length - 5].DesignArray))">
+                </label>
+            </div>
         </div>
     </div>
-</div>
+}
 
-<div> <p><br /></p></div>
+    <div> <p><br /></p></div>
 
-<div class="align-bottom text-center">
-    <a asp-action="Index"> <button style="color:darkorange" class="btn btn-outline-info btn-lg"> Add to Cart </button> </a>
-</div>
+    <div class="align-bottom text-center">
+        <a asp-action="Index"> <button style="color:darkorange" class="btn btn-outline-info btn-lg"> Add to Cart </button> </a>
+    </div>
