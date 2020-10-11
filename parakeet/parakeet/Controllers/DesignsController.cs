@@ -78,9 +78,9 @@ namespace parakeet.Controllers
                 Design design = new Design
                 {
                     DesignName = designview.DesignName,
-                    Popularitycounter = designview.Popularitycounter,
-                    Approved = designview.Approved,
-                    AdminViewed = designview.AdminViewed,
+                    Popularitycounter = 0,
+                    Approved = false,
+                    AdminViewed = false,
                     AbstractTag = designview.AbstractTag,
                     CoolTag = designview.CoolTag,
                     FunnyTag = designview.FunnyTag,

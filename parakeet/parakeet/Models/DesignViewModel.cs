@@ -12,9 +12,12 @@ namespace parakeet.Models
         public int DesignId { get; set; }
 
         // image that has been converted to byte array
+        [Required]
+        [Display(Name = "Your Design")]
         public IFormFile DesignArray { get; set; }
 
-        [Display(Name = "Design")]
+        [Required]
+        [Display(Name = "Design Name")]
         public string DesignName { get; set; }
 
         public int Popularitycounter { get; set; }
@@ -25,18 +28,25 @@ namespace parakeet.Models
         public bool? AdminViewed { get; set; }
 
         // filter tags
+        [Display(Name = "Nature")]
         public bool NatureTag { get; set; }
 
+        [Display(Name = "Funny")]
         public bool FunnyTag { get; set; }
 
+        [Display(Name = "Abstract")]
         public bool AbstractTag { get; set; }
 
+        [Display(Name = "Game")]
         public bool GameTag { get; set; }
 
+        [Display(Name = "Music")]
         public bool MusicTag { get; set; }
 
+        [Display(Name = "Movie")]
         public bool MovieTag { get; set; }
 
+        [Display(Name = "Cool")]
         public bool CoolTag { get; set; }
 
         public string UserId { get; set; }

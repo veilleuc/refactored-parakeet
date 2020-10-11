@@ -9253,19 +9253,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\aceun\\.nuget\\packages\\": {}
+    "C:\\Users\\johns\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\aceun\\github\\refactored-parakeet\\parakeet\\parakeet\\parakeet.csproj",
+      "projectUniqueName": "C:\\Users\\johns\\source\\repos\\refactored-parakeet\\parakeet\\parakeet\\parakeet.csproj",
       "projectName": "parakeet",
-      "projectPath": "C:\\Users\\aceun\\github\\refactored-parakeet\\parakeet\\parakeet\\parakeet.csproj",
-      "packagesPath": "C:\\Users\\aceun\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\aceun\\github\\refactored-parakeet\\parakeet\\parakeet\\obj\\",
+      "projectPath": "C:\\Users\\johns\\source\\repos\\refactored-parakeet\\parakeet\\parakeet\\parakeet.csproj",
+      "packagesPath": "C:\\Users\\johns\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\johns\\source\\repos\\refactored-parakeet\\parakeet\\parakeet\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\aceun\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\johns\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
