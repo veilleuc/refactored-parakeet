@@ -12,9 +12,9 @@
 <table class="table">
     <thead>
         <tr>
-            <th>
+            @*<th>
                 @Html.DisplayNameFor(model => model.DesignArray)
-            </th>
+            </th>*@
             <th>
                 @Html.DisplayNameFor(model => model.DesignName)
             </th>
@@ -57,9 +57,9 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            <td>
+            @*<td>
                 @Html.DisplayFor(modelItem => item.DesignArray)
-            </td>
+            </td>*@
             <td>
                 @Html.DisplayFor(modelItem => item.DesignName)
             </td>

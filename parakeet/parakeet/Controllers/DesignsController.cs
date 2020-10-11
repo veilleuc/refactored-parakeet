@@ -57,7 +57,7 @@ namespace parakeet.Controllers
             return View(design);
         }
 
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin, Basic")]
         // GET: Designs/Create
         public IActionResult Create()
         {
@@ -78,9 +78,9 @@ namespace parakeet.Controllers
                 Design design = new Design
                 {
                     DesignName = designview.DesignName,
-                    Popularitycounter = designview.Popularitycounter,
-                    Approved = designview.Approved,
-                    AdminViewed = designview.AdminViewed,
+                    Popularitycounter = 0,
+                    Approved = false,
+                    AdminViewed = false,
                     AbstractTag = designview.AbstractTag,
                     CoolTag = designview.CoolTag,
                     FunnyTag = designview.FunnyTag,
@@ -107,7 +107,7 @@ namespace parakeet.Controllers
                 await _context.SaveChangesAsync();
 
                 // redirect back to designs index page
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Index","Home");
             }
             return View(designview);
         }

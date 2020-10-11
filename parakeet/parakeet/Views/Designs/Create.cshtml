@@ -18,8 +18,7 @@
                        accept=".png,.jpg,.jpeg"
                        asp-for="DesignArray"
                        class="form-control"
-                       style="border:0px!important;padding: 0px;padding-top: 10px;padding-bottom: 30px;"
-                        />
+                       style="border:0px!important;padding: 0px;padding-top: 10px;padding-bottom: 30px;" />
                 <span asp-validation-for="DesignArray" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -27,20 +26,26 @@
                 <input asp-for="DesignName" class="form-control" />
                 <span asp-validation-for="DesignName" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Popularitycounter" class="control-label"></label>
-                <input asp-for="Popularitycounter" class="form-control" />
-                <span asp-validation-for="Popularitycounter" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Approved" class="control-label"></label>
-                <input asp-for="Approved" class="form-control" />
-                <span asp-validation-for="Approved" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="AdminViewed" class="control-label"></label>
-                <input asp-for="AdminViewed" class="form-control" />
-                <span asp-validation-for="AdminViewed" class="text-danger"></span>
+
+            @*<div class="form-group">
+            <label asp-for="Popularitycounter" class="control-label"></label>
+            <input asp-for="Popularitycounter" class="form-control" />
+            <span asp-validation-for="Popularitycounter" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Approved" class="control-label"></label>
+            <input asp-for="Approved" class="form-control" />
+            <span asp-validation-for="Approved" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="AdminViewed" class="control-label"></label>
+            <input asp-for="AdminViewed" class="form-control" />
+            <span asp-validation-for="AdminViewed" class="text-danger"></span>
+        </div>*@
+
+            @*This being here is optional, give me thoughts*@
+            <div class="text-left">
+                <h4 style="color:darkorange" style2="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif" class="text-left">Please Pick the Appropriate Tags Associated with the Design</h4>
             </div>
             <div class="form-group form-check">
                 <label class="form-check-label">
@@ -77,11 +82,11 @@
                     <input class="form-check-input" asp-for="CoolTag" /> @Html.DisplayNameFor(model => model.CoolTag)
                 </label>
             </div>
-            <div class="form-group">
-                <label asp-for="UserId" class="control-label"></label>
-                <input asp-for="UserId" class="form-control" />
-                <span asp-validation-for="UserId" class="text-danger"></span>
-            </div>
+            @*<div class="form-group">
+            <label asp-for="UserId" class="control-label"></label>
+            <input asp-for="UserId" class="form-control" />
+            <span asp-validation-for="UserId" class="text-danger"></span>
+        </div>*@
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
@@ -89,9 +94,7 @@
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
