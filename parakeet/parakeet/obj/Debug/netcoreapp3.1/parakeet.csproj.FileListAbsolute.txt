@@ -1953,9 +1953,6 @@ C:\Users\xzavi\Source\Repos\refactored-parakeet\parakeet\parakeet\bin\Debug\netc
 C:\Users\xzavi\Source\Repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\parakeet.csprojAssemblyReference.cache
 C:\Users\xzavi\Source\Repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\parakeet.AssemblyInfoInputs.cache
 C:\Users\xzavi\Source\Repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\parakeet.AssemblyInfo.cs
-C:\Users\xzavi\Source\Repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\parakeet.csproj.CoreCompileInputs.cache
-C:\Users\xzavi\Source\Repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\parakeet.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\xzavi\Source\Repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\parakeet.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\xzavi\Source\Repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\parakeet.RazorAssemblyInfo.cache
 C:\Users\xzavi\Source\Repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\parakeet.RazorAssemblyInfo.cs
 C:\Users\xzavi\Source\Repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\parakeet.TagHelpers.input.cache
@@ -2040,3 +2037,6 @@ C:\Users\xzavi\Source\Repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netc
 C:\Users\xzavi\Source\Repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\parakeet.dll
 C:\Users\xzavi\Source\Repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\parakeet.pdb
 C:\Users\xzavi\Source\Repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\parakeet.genruntimeconfig.cache
+C:\Users\xzavi\Source\Repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\parakeet.csproj.CoreCompileInputs.cache
+C:\Users\xzavi\Source\Repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\parakeet.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\xzavi\Source\Repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\parakeet.MvcApplicationPartsAssemblyInfo.cache

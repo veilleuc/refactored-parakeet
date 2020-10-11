@@ -22,8 +22,6 @@ namespace parakeet.Controllers
         {
             Design[] designs = _context.Designs.ToArray();
 
-            // Display designs 
-
             return View(designs);
         }
         public IActionResult Privacy()

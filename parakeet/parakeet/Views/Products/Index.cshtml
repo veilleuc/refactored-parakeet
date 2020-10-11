@@ -32,7 +32,7 @@
             </label>
 
             <label class="btn btn-outline-info mr-5">
-                <input type="radio" name="options" id="option3" autocomplete="off" style="color:darkorange">
+                <input type="radio" name="options" id="option4" autocomplete="off" style="color:darkorange">
                 Jacket $50
             </label>
         </div>
@@ -78,30 +78,33 @@
 <div> <p><br /></p></div>
 
 <div class="container">
-    <div class="row">
-        @if (Model == null || Model.Length < 5)
-        {
-            // there are no designs or less than 5 designs in DB so there is no top 5
-            <div class="col-sm-1"></div>
-            <div class="col-sm-2">1</div>
-            <div class="col-sm-2">2</div>
-            <div class="col-sm-2">3</div>
-            <div class="col-sm-2">4</div>
-            <div class="col-sm-2">5</div>
-            <div class="col-sm-1"></div>
-        }
-        else
-        {
-            // there are enough designs in the DB to present 5 designs
-            <div class="col-sm-1"></div>
-            <div class="col-sm-2"><img id="profilePicture" style="width:150px;height:160px; object-fit:cover" src="data:image/*;base64,@(Convert.ToBase64String(Model[Model.Length-1].DesignArray))"></div>
-            <div class="col-sm-2"><img id="profilePicture" style="width:150px;height:160px; object-fit:cover" src="data:image/*;base64,@(Convert.ToBase64String(Model[Model.Length-2].DesignArray))"></div>
-            <div class="col-sm-2"><img id="profilePicture" style="width:150px;height:160px; object-fit:cover" src="data:image/*;base64,@(Convert.ToBase64String(Model[Model.Length-5].DesignArray))"></div>
-            <div class="col-sm-2"><img id="profilePicture" style="width:150px;height:160px; object-fit:cover" src="data:image/*;base64,@(Convert.ToBase64String(Model[Model.Length-3].DesignArray))"></div>
-            <div class="col-sm-2"><img id="profilePicture" style="width:150px;height:160px; object-fit:cover" src="data:image/*;base64,@(Convert.ToBase64String(Model[Model.Length-4].DesignArray))"></div>
-            <div class="col-sm-1"></div>
-        }
+    <div class="text-center">
+        <div class="btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-outline-info mr-3">
+                <input type="radio" name="options" id="option1" autocomplete="off" style="color:darkorange">
+                <img id="profilePicture" style="width:150px;height:160px; object-fit:cover" src="data:image/*;base64,@(Convert.ToBase64String(Model[Model.Length-1].DesignArray))">
+            </label>
 
+            <label class="btn btn-outline-info mr-3">
+                <input type="radio" name="options" id="option2" autocomplete="off" style="color:darkorange">
+                <img id="profilePicture" style="width:150px;height:160px; object-fit:cover" src="data:image/*;base64,@(Convert.ToBase64String(Model[Model.Length-2].DesignArray))">
+            </label>
+
+            <label class="btn btn-outline-info mr-3">
+                <input type="radio" name="options" id="option3" autocomplete="off" style="color:darkorange">
+                <img id="profilePicture" style="width:150px;height:160px; object-fit:cover" src="data:image/*;base64,@(Convert.ToBase64String(Model[Model.Length-3].DesignArray))">
+            </label>
+
+            <label class="btn btn-outline-info mr-3">
+                <input type="radio" name="options" id="option4" autocomplete="off" style="color:darkorange">
+                <img id="profilePicture" style="width:150px;height:160px; object-fit:cover" src="data:image/*;base64,@(Convert.ToBase64String(Model[Model.Length-4].DesignArray))">
+            </label>
+
+            <label class="btn btn-outline-info mr-3">
+                <input type="radio" name="options" id="option5" autocomplete="off" style="color:darkorange">
+                <img id="profilePicture" style="width:150px;height:160px; object-fit:cover" src="data:image/*;base64,@(Convert.ToBase64String(Model[Model.Length-5].DesignArray))">
+            </label>
+        </div>
     </div>
 </div>
 
@@ -110,4 +113,3 @@
 <div class="align-bottom text-center">
     <a asp-action="Index"> <button style="color:darkorange" class="btn btn-outline-info btn-lg"> Add to Cart </button> </a>
 </div>
-
