@@ -57,7 +57,7 @@ namespace parakeet.Controllers
             return View(design);
         }
 
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin, Basic")]
         // GET: Designs/Create
         public IActionResult Create()
         {
@@ -107,7 +107,7 @@ namespace parakeet.Controllers
                 await _context.SaveChangesAsync();
 
                 // redirect back to designs index page
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Index","Home");
             }
             return View(designview);
         }

@@ -2040,3 +2040,5 @@ C:\Users\xzavi\Source\Repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netc
 C:\Users\xzavi\Source\Repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\parakeet.csproj.CoreCompileInputs.cache
 C:\Users\xzavi\Source\Repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\parakeet.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\xzavi\Source\Repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\parakeet.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\jdogg\csci540_proj\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\Products\Index.cshtml.g.cs
+C:\Users\jdogg\csci540_proj\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\Products\Privacy.cshtml.g.cs
