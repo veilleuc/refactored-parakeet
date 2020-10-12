@@ -32,7 +32,7 @@
                 Order Item ID
             </th>
             <th>
-                Design ID
+                Design 
             </th>
             <th>
                 Clothing Type
@@ -51,7 +51,7 @@
                 @Html.DisplayFor(modelItem => item.OrderItemHistoryId)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.DesignId)
+                <img id="profilePicture" style="width:150px;height:160px; object-fit:cover" src="data:image/*;base64,@(Convert.ToBase64String(item.Design.DesignArray))">
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.ClothingType.type)

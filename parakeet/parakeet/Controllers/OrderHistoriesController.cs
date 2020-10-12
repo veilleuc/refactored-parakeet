@@ -57,6 +57,8 @@ namespace parakeet.Controllers
                     .ThenInclude(c => c.Size)
                 .Include(c => c.OrderItemHistory)
                     .ThenInclude(c => c.ClothingType)
+                 .Include(c => c.OrderItemHistory)
+                    .ThenInclude(c => c.Design)
                 .FirstOrDefaultAsync(m => m.OrderHistoryId == id);
             if (orderHistory == null)
             {
