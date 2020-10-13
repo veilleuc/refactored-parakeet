@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "mssql2": {
+      "restored": true,
+      "restoreTime": "2020-10-12T16:38:59.9795583Z"
+    }
+  },
+  "parameters": {
+    "mssql2.subscriptionId": {
+      "Type": "subscription",
+      "Value": "f1366f77-eca0-4460-ae81-93af019b2bff"
+    },
+    "mssql2.resourceGroupName": {
+      "Type": "resourceGroup",
+      "Value": "ParakeetResourceGroup"
+    }
+  }
+}
