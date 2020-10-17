@@ -34,6 +34,7 @@ namespace parakeet
                     .AddDefaultUI()
                     .AddDefaultTokenProviders();
             services.AddControllersWithViews();
+            services.AddSession();
             services.AddRazorPages();
         }
 
@@ -52,6 +53,7 @@ namespace parakeet
                 app.UseHsts();
             }
             app.UseHttpsRedirection();
+            app.UseSession();
             app.UseStaticFiles();
 
             app.UseRouting();
