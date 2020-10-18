@@ -39,6 +39,8 @@ namespace parakeet.Controllers
                 ViewData["isEqual"] = false;
             }
            */
+
+            // testing how to retrieve db items using name instead of id
             Size size = await _context.Sizes.FirstOrDefaultAsync(s => s.SizeName == "XL");
 
             return View(size);

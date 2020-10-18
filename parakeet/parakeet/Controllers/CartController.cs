@@ -4,6 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using parakeet.Data;
+using parakeet.Helpers;
+using parakeet.Models;
+
 
 namespace parakeet.Controllers
 {
@@ -12,76 +17,39 @@ namespace parakeet.Controllers
         // GET: CartController
         public ActionResult Index()
         {
+            // add cartitem list to viewbag then go to index view page
+            var cart = SessionHelper.GetObjectFromJson<List<CartItem>>(HttpContext.Session, "cart");
+            ViewBag.cart = cart;
             return View();
         }
 
-        // GET: CartController/Details/5
-        public ActionResult Details(int id)
+        // GET: CartController/Add
+        public ActionResult Add(CartItem cartItem)
         {
-            return View();
-        }
-
-        // GET: CartController/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: CartController/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
-        {
-            try
+            // if session list has not been created then create a new one and add item
+            if (SessionHelper.GetObjectFromJson<List<CartItem>>(HttpContext.Session, "cart") == null)
             {
-                return RedirectToAction(nameof(Index));
+                List<CartItem> cart = new List<CartItem>();
+                cart.Add(cartItem);
+                SessionHelper.SetObjectAsJson(HttpContext.Session, "cart", cart);
             }
-            catch
+            // session list has been created so just add item to list
+            else
             {
-                return View();
+                List<CartItem> cart = SessionHelper.GetObjectFromJson<List<CartItem>>(HttpContext.Session, "cart");
+                cart.Add(cartItem);
+                SessionHelper.SetObjectAsJson(HttpContext.Session, "cart", cart);
             }
+
+            return RedirectToAction("Index");
         }
 
-        // GET: CartController/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: CartController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: CartController/Delete/5
-        public ActionResult Delete(int id)
+        // GET: CartController/Remove
+        public ActionResult Remove()
         {
             return View();
         }
 
-        // POST: CartController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
+
     }
 }
