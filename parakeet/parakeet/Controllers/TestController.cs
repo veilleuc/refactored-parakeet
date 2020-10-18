@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using parakeet.Data;
 using parakeet.Models;
 
 namespace parakeet.Controllers
@@ -12,14 +15,22 @@ namespace parakeet.Controllers
     // THIS CONTROLLER CAN BE USED FOR TESTING IDEAS OR LAYOUTS WITHOUT MESSING WITH PRODUCTION CONTROLLERS
     public class TestController : Controller
     {
+        private readonly ApplicationDbContext _context;
+
+        public TestController(ApplicationDbContext context)
+        {
+            _context = context;
+
+        }
+
         // GET: TestController
-        public ActionResult Index()
+        public async Task<ActionResult> IndexAsync()
         {
             // testing the datetimes for orderhistory to see i can pull a specific orderhistory using date
             ViewData["date"] = DateTime.Today;
-            DateTime order = (DateTime)TempData["date2"];
-            ViewData["date2"] = TempData["date2"];
-            if(DateTime.Today == order.Date)
+            
+            //ViewData["date2"] = TempData["date2"];
+           /* if(DateTime.Today == order.Date)
             {
                 ViewData["isEqual"] = true;
             }
@@ -27,7 +38,10 @@ namespace parakeet.Controllers
             {
                 ViewData["isEqual"] = false;
             }
-            return View();
+           */
+            Size size = await _context.Sizes.FirstOrDefaultAsync(s => s.SizeName == "XL");
+
+            return View(size);
         }
 
         // GET: TestController/Details/5
@@ -49,7 +63,7 @@ namespace parakeet.Controllers
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(IndexAsync));
             }
             catch
             {
@@ -70,7 +84,7 @@ namespace parakeet.Controllers
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(IndexAsync));
             }
             catch
             {
@@ -91,7 +105,7 @@ namespace parakeet.Controllers
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(IndexAsync));
             }
             catch
             {

@@ -1,8 +1,11 @@
-﻿@*
+﻿@model Size
+@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
 }
 
-<p>@ViewData["date"] order history  date: @ViewData["date2"]</p>
+<p>@ViewData["date"] order history  date: </p>
 <p> @ViewData["isEqual"]</p>
+<p> @Model.SizeId</p>
+<p> @Model.SizeName</p>
