@@ -2051,3 +2051,4 @@ C:\Users\jdogg\csci540_proj\refactored-parakeet\parakeet\parakeet\obj\Debug\netc
 C:\Users\jdogg\csci540_proj\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\Sizes\Details.cshtml.g.cs
 C:\Users\jdogg\csci540_proj\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\Sizes\Edit.cshtml.g.cs
 C:\Users\jdogg\csci540_proj\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\Sizes\Index.cshtml.g.cs
+C:\Users\jdogg\csci540_proj\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\Test\Create.cshtml.g.cs

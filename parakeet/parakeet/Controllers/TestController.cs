@@ -51,6 +51,14 @@ namespace parakeet.Controllers
         {
             return View();
         }
+        public ActionResult Add()
+        {
+            // add an item to the cart (hardcoded)
+            TempData["ClothingID"] = 1;
+            TempData["DesignID"] = 1;
+            TempData["SizeID"] = 1;
+            return RedirectToAction("Add","Cart");
+        }
 
         // GET: TestController/Create
         public ActionResult Create()

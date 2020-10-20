@@ -7,10 +7,10 @@ namespace parakeet.Models
 {
     public class CartItem
     {
-        public Size Size { get; set; }
+        public Size size { get; set; }
 
-        public ClothingType ClothingType { get; set; }
+        public ClothingType clothingType { get; set; }
 
-        public Design Design { get; set; }
+        public Design design { get; set; }
     }
 }
