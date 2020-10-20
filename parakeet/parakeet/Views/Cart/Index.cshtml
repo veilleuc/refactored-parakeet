@@ -4,25 +4,34 @@
 @{
 }
 <h3>Cart Page</h3>
-<table cellpadding="2" cellspacing="2" border="1">
+@if ((bool)ViewData["Empty"] == true)
+{
+    <p>No items Currently in your cart</p>
+}
+else
+{
+<table class="table table-hover table-striped">
     <tr>
-        
-        
-        <th>Name</th>
-        <th>Photo</th>
-        
-        
+
+
+        <th>Clothing Type</th>
+        <th>Size</th>
+        <th>Design</th>
+        <th>Price</th>
+
+
     </tr>
     @foreach (CartItem item in ViewBag.cart)
     {
-        <tr>
-           
-            <td>@item.clothingType.type</td>
-            <td><img id="profilePicture" style="width:150px;height:160px; object-fit:cover" src="data:image/*;base64,@(Convert.ToBase64String(item.design.DesignArray))"></td>
-            
-            
-            
-        </tr>
+<tr>
+
+    <td>@item.clothingType.type</td>
+    <td>@item.size.SizeName</td>
+    <td><img id="profilePicture" style="width:150px;height:160px; object-fit:cover" src="data:image/*;base64,@(Convert.ToBase64String(item.design.DesignArray))"></td>
+    <td>@item.clothingType.price</td>
+
+
+</tr>
     }
     <tr>
         <td align="right" colspan="6">Sum: @ViewBag.total</td>
@@ -31,5 +40,6 @@
         </td>
     </tr>
 </table>
+}
 <br>
 <a asp-controller="Home" asp-action="index">Continue Shopping</a>

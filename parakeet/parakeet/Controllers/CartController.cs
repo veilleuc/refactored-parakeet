@@ -25,6 +25,14 @@ namespace parakeet.Controllers
         {
             // add cartitem list to viewbag then go to index view page
             var cart = SessionHelper.GetObjectFromJson<List<CartItem>>(HttpContext.Session, "cart");
+
+            if (cart == null)
+            {
+                ViewData["Empty"] = true;
+                return View();
+            }
+
+            ViewData["Empty"] = false;
             ViewBag.cart = cart;
             // add the cost of all items so that the  final price can be displayed
             ViewBag.total = cart.Sum(item => item.clothingType.price);
