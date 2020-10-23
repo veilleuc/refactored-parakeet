@@ -1,4 +1,4 @@
-﻿@model Design[]
+﻿@model ProductsViewModel
 
 <form asp-action="Index" methods="get">
     <div>
@@ -17,23 +17,23 @@
     <div class="text-center">
         <div class="btn btn-group-toggle" data-toggle="buttons">
             <label class="btn btn-outline-info mr-5">
-                <input type="radio" name="options" id="option1" autocomplete="off" style="color:darkorange">
+                <input asp-for="ClothingTypes" type="radio" value="@Model.clothingTypes[0].type" autocomplete="off" style="color:darkorange">
                 Short Sleeve $20
             </label>
 
             <label class="btn btn-outline-info mr-5">
-                <input type="radio" name="options" id="option2" autocomplete="off" style="color:darkorange">
+                <input asp-for="ClothingTypes" type="radio" value="@Model.clothingTypes[1].type" autocomplete="off" style="color:darkorange">
                 Long Sleeve $35
             </label>
 
             <label class="btn btn-outline-info mr-5">
-                <input type="radio" name="options" id="option3" autocomplete="off" style="color:darkorange">
-                Hoodie $40
+                <input asp-for="ClothingTypes" type="radio" value="@Model.clothingTypes[2].type" autocomplete="off" style="color:darkorange">
+                Jacket $50
             </label>
 
             <label class="btn btn-outline-info mr-5">
-                <input type="radio" name="options" id="option4" autocomplete="off" style="color:darkorange">
-                Jacket $50
+                <input asp-for="ClothingTypes" type="radio" value="@Model.clothingTypes[3].type" autocomplete="off" style="color:darkorange">
+                Hoodie $40
             </label>
         </div>
     </div>
@@ -43,32 +43,32 @@
     <div class="text-center">
         <div class="btn btn-group-toggle" data-toggle="buttons">
             <label class="btn btn-outline-info mr-5">
-                <input type="radio" name="options" id="option1" autocomplete="off" style="color:darkorange">
+                <input asp-for="Sizes" type="radio" value="@Model.sizes[0].SizeName" autocomplete="off" style="color:darkorange">
                 X-Small
             </label>
 
             <label class="btn btn-outline-info mr-5">
-                <input type="radio" name="options" id="option2" autocomplete="off" style="color:darkorange">
+                <input asp-for="Sizes" type="radio" value="@Model.sizes[1].SizeName" autocomplete="off" style="color:darkorange">
                 Small
             </label>
 
             <label class="btn btn-outline-info mr-5">
-                <input type="radio" name="options" id="option3" autocomplete="off" style="color:darkorange">
+                <input asp-for="Sizes" type="radio" value="@Model.sizes[2].SizeName" autocomplete="off" style="color:darkorange">
                 Medium
             </label>
 
             <label class="btn btn-outline-info mr-5">
-                <input type="radio" name="options" id="option4" autocomplete="off" style="color:darkorange">
+                <input asp-for="Sizes" type="radio" value="@Model.sizes[3].SizeName" autocomplete="off" style="color:darkorange">
                 Large
             </label>
 
             <label class="btn btn-outline-info mr-5">
-                <input type="radio" name="options" id="option5" autocomplete="off" style="color:darkorange">
+                <input asp-for="Sizes" type="radio" value="@Model.sizes[4].SizeName" autocomplete="off" style="color:darkorange">
                 X-Large
             </label>
 
             <label class="btn btn-outline-info mr-5">
-                <input type="radio" name="options" id="option6" autocomplete="off" style="color:darkorange">
+                <input asp-for="Sizes" type="radio" value="@Model.sizes[5].SizeName" autocomplete="off" style="color:darkorange">
                 XX-Large
             </label>
         </div>
@@ -78,42 +78,26 @@
 <div> <p><br /></p></div>
 
 
-@if (Model == null || Model.Length < 5)
+@if (Model == null)
 {
-    <h1 style=" font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif" class="font-weight-bold  text-center">There are less than 5 designs and cannot display</h1>
+    <h1 style=" font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif" class="font-weight-bold  text-center">There are no designs to display</h1>
 }
 else
 {
-    <div class="container">
-        <div class="text-center">
-            <div class="btn-group-toggle" data-toggle="buttons">
-                <label class="btn btn-outline-info mr-3">
-                    <input type="radio" name="options" id="option1" autocomplete="off" style="color:darkorange">
-                    <img id="profilePicture" style="width:150px;height:160px; object-fit:cover" src="data:image/*;base64,@(Convert.ToBase64String(Model[Model.Length - 1].DesignArray))">
-                </label>
-
-                <label class="btn btn-outline-info mr-3">
-                    <input type="radio" name="options" id="option2" autocomplete="off" style="color:darkorange">
-                    <img id="profilePicture" style="width:150px;height:160px; object-fit:cover" src="data:image/*;base64,@(Convert.ToBase64String(Model[Model.Length - 2].DesignArray))">
-                </label>
-
-                <label class="btn btn-outline-info mr-3">
-                    <input type="radio" name="options" id="option3" autocomplete="off" style="color:darkorange">
-                    <img id="profilePicture" style="width:150px;height:160px; object-fit:cover" src="data:image/*;base64,@(Convert.ToBase64String(Model[Model.Length - 3].DesignArray))">
-                </label>
-
-                <label class="btn btn-outline-info mr-3">
-                    <input type="radio" name="options" id="option4" autocomplete="off" style="color:darkorange">
-                    <img id="profilePicture" style="width:150px;height:160px; object-fit:cover" src="data:image/*;base64,@(Convert.ToBase64String(Model[Model.Length - 4].DesignArray))">
-                </label>
-
-                <label class="btn btn-outline-info mr-3">
-                    <input type="radio" name="options" id="option5" autocomplete="off" style="color:darkorange">
-                    <img id="profilePicture" style="width:150px;height:160px; object-fit:cover" src="data:image/*;base64,@(Convert.ToBase64String(Model[Model.Length - 5].DesignArray))">
-                </label>
+        <div class="container">
+            <div class="text-center">
+                <div class="btn-group-toggle" data-toggle="buttons">
+                    @for (int i = 0; Model.designs.Length > i; i++)
+                    {
+                        <div class="btn btn-outline-info mr-3">
+                            <input asp-for="Designs" type="radio" value="@Model.designs[i].DesignName" autocomplete="off" style="color:darkorange">
+                            <img id="profilePicture" style="width:150px;height:160px; object-fit:cover" src="data:image/*;base64,@(Convert.ToBase64String(Model.designs[i].DesignArray))">
+                            <p>@Model.designs[i].DesignName</p>
+                        </div>
+                    }
+                </div>
             </div>
         </div>
-    </div>
 }
 
     <div> <p><br /></p></div>

@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using parakeet.Models;
 using Microsoft.EntityFrameworkCore;
 using parakeet.Data;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace parakeet.Controllers
 {
@@ -18,11 +19,13 @@ namespace parakeet.Controllers
         {
             _context = context;
         }
-        public IActionResult Index()
+        public IActionResult Index(ProductsViewModel viewModel)
         {
-            Design[] designs = _context.Designs.ToArray();
+            viewModel.designs = _context.Designs.ToArray();
+            viewModel.clothingTypes = _context.ClothingTypes.ToArray();
+            viewModel.sizes = _context.Sizes.ToArray();
 
-            return View(designs);
+            return View(viewModel);
         }
         public IActionResult Privacy()
         {

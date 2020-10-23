@@ -2052,3 +2052,13 @@ C:\Users\jdogg\csci540_proj\refactored-parakeet\parakeet\parakeet\obj\Debug\netc
 C:\Users\jdogg\csci540_proj\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\Sizes\Edit.cshtml.g.cs
 C:\Users\jdogg\csci540_proj\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\Sizes\Index.cshtml.g.cs
 C:\Users\jdogg\csci540_proj\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\Test\Create.cshtml.g.cs
+C:\Users\xzavi\source\repos\refactored-parakeet\parakeet\parakeet\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.parakeet - Web Deploy.json
+C:\Users\xzavi\source\repos\refactored-parakeet\parakeet\parakeet\bin\Debug\netcoreapp3.1\Properties\ServiceDependencies\parakeet - Web Deploy\mssql2.arm.json
+C:\Users\xzavi\source\repos\refactored-parakeet\parakeet\parakeet\bin\Debug\netcoreapp3.1\Properties\ServiceDependencies\parakeet - Web Deploy\profile.arm.json
+C:\Users\xzavi\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\Cart\Index.cshtml.g.cs
+C:\Users\xzavi\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\Sizes\Create.cshtml.g.cs
+C:\Users\xzavi\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\Sizes\Delete.cshtml.g.cs
+C:\Users\xzavi\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\Sizes\Details.cshtml.g.cs
+C:\Users\xzavi\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\Sizes\Edit.cshtml.g.cs
+C:\Users\xzavi\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\Sizes\Index.cshtml.g.cs
+C:\Users\xzavi\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\Test\Create.cshtml.g.cs
