@@ -26,7 +26,8 @@ namespace parakeet.Controllers
             // add cartitem list to viewbag then go to index view page
             var cart = SessionHelper.GetObjectFromJson<List<CartItem>>(HttpContext.Session, "cart");
 
-            if (cart == null)
+            // if the cart has not been created or the cart is currently empty
+            if (cart == null || cart.Count == 0)
             {
                 ViewData["Empty"] = true;
                 return View();
@@ -42,14 +43,14 @@ namespace parakeet.Controllers
         // GET: CartController/Add
         public async Task<ActionResult> AddAsync()
         {
-            int clothingID = (int)TempData["ClothingID"];
-            int designID = (int)TempData["DesignID"];
-            int sizeID = (int)TempData["SizeID"];
+            string clothingID = (string)TempData["ClothingName"];
+            string designID = (string)TempData["DesignName"];
+            string sizeID = (string)TempData["SizeName"];
 
             // pull items from database related to the product chosen
-            ClothingType type = await _context.ClothingTypes.FirstOrDefaultAsync(c => c.ClothingTypeId == clothingID);
-            Design design1 = await _context.Designs.FirstOrDefaultAsync(d => d.DesignId == designID);
-            Size size1 = await _context.Sizes.FirstOrDefaultAsync(s => s.SizeId == sizeID);
+            ClothingType type = await _context.ClothingTypes.FirstOrDefaultAsync(c => c.type == clothingID);
+            Design design1 = await _context.Designs.FirstOrDefaultAsync(d => d.DesignName == designID);
+            Size size1 = await _context.Sizes.FirstOrDefaultAsync(s => s.SizeName == sizeID);
 
             // create a new cartitem obj
             CartItem item = new CartItem
@@ -80,9 +81,24 @@ namespace parakeet.Controllers
         }
 
         // GET: CartController/Remove
-        public ActionResult Remove()
+        public ActionResult Remove(int? id)
         {
-            return View();
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            int index = (int)id;
+
+            // get the cart from the session
+            List<CartItem> cart = SessionHelper.GetObjectFromJson<List<CartItem>>(HttpContext.Session, "cart");
+            
+            // remove the item at the cart index
+            cart.RemoveAt(index);
+
+            // add the updated cart back to the session
+            SessionHelper.SetObjectAsJson(HttpContext.Session, "cart", cart);
+            return RedirectToAction("Index");
         }
 
         // GET: should visit when user clicks checkout from cart index page

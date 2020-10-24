@@ -3,43 +3,70 @@
 *@
 @{
 }
-<h3>Cart Page</h3>
+<h3 class="text-info">Your Cart</h3>
+<p>
+    <br />
+    <a asp-controller="Home" asp-action="index"><button style="color:darkorange" class="btn btn-outline-info btn-lg"> Continue Shopping </button> </a>
+    <br />
+</p>
+
 @if ((bool)ViewData["Empty"] == true)
 {
     <p>No items Currently in your cart</p>
 }
 else
 {
-<table class="table table-hover table-striped">
-    <tr>
+    <table class="table table-info table-hover table-striped">
+        <tr>
 
 
-        <th>Clothing Type</th>
-        <th>Size</th>
-        <th>Design</th>
-        <th>Price</th>
+            <th>Clothing Type</th>
+            <th>Size</th>
+            <th class="text-center">Design</th>
+            <th>Price</th>
+            <th></th>
 
 
-    </tr>
-    @foreach (CartItem item in ViewBag.cart)
-    {
-<tr>
+        </tr>
+        @for (int i = 0; i < ViewBag.cart.Count; i++)
+        {
+            <tr>
 
-    <td>@item.clothingType.type</td>
-    <td>@item.size.SizeName</td>
-    <td><img id="profilePicture" style="width:150px;height:160px; object-fit:cover" src="data:image/*;base64,@(Convert.ToBase64String(item.design.DesignArray))"></td>
-    <td>@item.clothingType.price</td>
+                <td>@ViewBag.cart[i].clothingType.type</td>
+                <td>@ViewBag.cart[i].size.SizeName</td>
+                <td class="text-center"><img id="profilePicture" style="width:150px;height:160px; object-fit:cover" src="data:image/*;base64,@(Convert.ToBase64String(ViewBag.cart[i].design.DesignArray))"></td>
+                <td>$@ViewBag.cart[i].clothingType.price</td>
+                <td><a asp-action="Remove" asp-route-id="@i">Remove</a></td>
 
+            </tr>
+        }
 
-</tr>
-    }
-    <tr>
-        <td align="right" colspan="6">Sum: @ViewBag.total</td>
-        <td>
-           
-        </td>
-    </tr>
-</table>
+    </table>
 }
 <br>
-<a asp-controller="Home" asp-action="index">Continue Shopping</a>
+@if ((bool)ViewData["Empty"] == false)
+{
+<div class="container">
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <div class="text-center">
+                <br />
+                <br />
+            </div>
+        </div>
+        <div class="col-2">
+
+            <div class="jumbotron">
+                <div class="text-center">
+                    <p style=" font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; ">Total: $@ViewBag.total </p>
+                </div>
+                <a asp-controller="Cart" asp-action="Index"> <button style="color:darkorange" class="btn btn-outline-info btn-lg align-content-center"> Checkout </button> </a>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+}
+
