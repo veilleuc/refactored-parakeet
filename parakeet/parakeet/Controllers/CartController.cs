@@ -113,11 +113,13 @@ namespace parakeet.Controllers
             
             return View();
         }
+        
         [HttpPost]
         public ActionResult Checkout([Bind("Address,City,State,Zipcode")] CheckoutViewModel OrderInfo)
         {
             if (!ModelState.IsValid)
             {
+                // if the form was not filled out correctly
                 return View(OrderInfo);
             }
 
@@ -127,23 +129,30 @@ namespace parakeet.Controllers
 
         public async Task<ActionResult> ConfirmAsync()
         {
+            // get the cart list from the session
             List<CartItem> cart = SessionHelper.GetObjectFromJson<List<CartItem>>(HttpContext.Session, "cart");
 
             foreach(CartItem item in cart)
             {
+                // get design from DB so the popularity counter can be incremented
+                Design design = _context.Designs.Find(item.design.DesignId);
                 // increment the design popularity by 1 then update it in the DB
-                item.design.Popularitycounter += 1;
-                _context.Update(item.design);
+                design.Popularitycounter += 1;
+
+                // save the change
+                _context.SaveChanges();
             }
 
-             _context.SaveChanges();
+            
+
 
             // check if the buyer is a guest or is a signed in user
             // if they are then the cart must be added to their orderhistory so it can be viewed later
             if (_signInManager.IsSignedIn(User))
             {
-                
+                // get the current time so it can be used for OderHistory accessing
                 DateTime OrderCreationTime = DateTime.Now;
+
                 // get user info 
                 ApplicationUser user = await _userManager.GetUserAsync(User);
 
@@ -156,15 +165,36 @@ namespace parakeet.Controllers
                 
 
                 // add orderhistory to DB
-                _context.Add(orderHistory);
-                await _context.SaveChangesAsync();
+                _context.orderHistories.Add(orderHistory);
+                _context.SaveChanges();
 
                 // retrieve the newly created orderhistory from DB 
                 orderHistory = _context.orderHistories.FirstOrDefault(o => o.OrderDate == OrderCreationTime && o.ApplicationUser == user);
 
-                
-                
+                // loop through each item in the cart 
+                foreach (CartItem item in cart)
+                {
+                    //  create a new order item for the order history
+                    OrderItemHistory orderItem = new OrderItemHistory
+                    {
+                        OrderHistoryId = orderHistory.OrderHistoryId,
+                        DesignId = item.design.DesignId,
+                        SizeId = item.size.SizeId,
+                        ClothingTypeId = item.clothingType.ClothingTypeId
+                    };
+
+                    // add the item to DB
+                    _context.orderItemHistories.Add(orderItem);
+                }
+
+                _context.SaveChanges();
+
+                // reset the cart 
+                cart = new List<CartItem>();
+                // store the new cart back in session
+                SessionHelper.SetObjectAsJson(HttpContext.Session, "cart", cart);
             }
+
             return View();
         }
 

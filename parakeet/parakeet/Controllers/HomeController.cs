@@ -29,9 +29,9 @@ namespace parakeet.Controllers
             // sort the designs by popularity
             // this will sort them from lowest to highest so must get last 5 designs
 
-            //Array.Sort(designs, delegate (Design d1, Design d2) {
-           //     return d1.Popularitycounter.CompareTo(d2.Popularitycounter);
-           // });
+            Array.Sort(designs, delegate (Design d1, Design d2) {
+               return d1.Popularitycounter.CompareTo(d2.Popularitycounter);
+           });
 
             return View(designs);
         }

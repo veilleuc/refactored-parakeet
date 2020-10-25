@@ -28,9 +28,7 @@
 <table class="table">
     <thead>
         <tr>
-            <th>
-                Order Item ID
-            </th>
+            
             <th>
                 Design 
             </th>
@@ -40,16 +38,16 @@
             <th>
                 Size
             </th>
-            <th></th>
+            <th>
+                Price
+            </th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model.OrderItemHistory) {
         <tr>
-           
-            <td>
-                @Html.DisplayFor(modelItem => item.OrderItemHistoryId)
-            </td>
+
+
             <td>
                 <img id="profilePicture" style="width:150px;height:160px; object-fit:cover" src="data:image/*;base64,@(Convert.ToBase64String(item.Design.DesignArray))">
             </td>
@@ -58,6 +56,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Size.SizeName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClothingType.price)
             </td>
         </tr>
 }
