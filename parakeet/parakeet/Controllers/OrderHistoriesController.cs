@@ -88,8 +88,7 @@ namespace parakeet.Controllers
                 //assign user to the order
                 orderHistory.ApplicationUser = await _userManager.GetUserAsync(User);
                 
-                TempData["date2"] = orderHistory.OrderDate;
-                TempData.Keep();
+                
                 _context.Add(orderHistory);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));

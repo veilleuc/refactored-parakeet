@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.EntityFrameworkCore;
 using parakeet.Data;
 using parakeet.Helpers;
@@ -14,11 +16,15 @@ namespace parakeet.Controllers
 {
     public class CartController : Controller
     {
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly ApplicationDbContext _context;
 
-        public CartController(ApplicationDbContext context)
+        public CartController(ApplicationDbContext context, UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager)
         {
             _context = context;
+            _userManager = userManager;
+            _signInManager = signInManager;
         }
         // GET: CartController
         public ActionResult Index()
@@ -105,6 +111,60 @@ namespace parakeet.Controllers
         public ActionResult Checkout()
         {
             
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Checkout([Bind("Address,City,State,Zipcode")] CheckoutViewModel OrderInfo)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(OrderInfo);
+            }
+
+
+            return RedirectToAction("Confirm");
+        }
+
+        public async Task<ActionResult> ConfirmAsync()
+        {
+            List<CartItem> cart = SessionHelper.GetObjectFromJson<List<CartItem>>(HttpContext.Session, "cart");
+
+            foreach(CartItem item in cart)
+            {
+                // increment the design popularity by 1 then update it in the DB
+                item.design.Popularitycounter += 1;
+                _context.Update(item.design);
+            }
+
+             _context.SaveChanges();
+
+            // check if the buyer is a guest or is a signed in user
+            // if they are then the cart must be added to their orderhistory so it can be viewed later
+            if (_signInManager.IsSignedIn(User))
+            {
+                
+                DateTime OrderCreationTime = DateTime.Now;
+                // get user info 
+                ApplicationUser user = await _userManager.GetUserAsync(User);
+
+                // create new orderhistory
+                OrderHistory orderHistory = new OrderHistory
+                {
+                    ApplicationUser = user,
+                    OrderDate = OrderCreationTime
+                };
+                
+
+                // add orderhistory to DB
+                _context.Add(orderHistory);
+                await _context.SaveChangesAsync();
+
+                // retrieve the newly created orderhistory from DB 
+                orderHistory = _context.orderHistories.FirstOrDefault(o => o.OrderDate == OrderCreationTime && o.ApplicationUser == user);
+
+                
+                
+            }
             return View();
         }
 
