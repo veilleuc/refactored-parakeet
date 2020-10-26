@@ -12,6 +12,12 @@
     <div class="col-md-4">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="DesignArray" />
+            <div class="form-group">
+                <label asp-for="DesignArray" class="control-label"></label>
+                <input asp-for="DesignArray" class="form-control" />
+                <span asp-validation-for="DesignArray" class="text-danger"></span>
+            </div>
             <input type="hidden" asp-for="DesignId" />
             <div class="form-group">
                 <label asp-for="DesignName" class="control-label"></label>

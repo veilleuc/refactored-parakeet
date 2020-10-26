@@ -28,13 +28,13 @@ namespace parakeet.Controllers
             // for DB access
             _context = context;
         }
-
+        [Authorize(Roles = "Admin")]
         // GET: AdminDashboard
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Designs.ToListAsync());
+            return View(await _context.Designs.Where(c => !c.AdminViewed.Equals(true)).ToListAsync());
         }
-
+        [Authorize(Roles = "Admin")]
         // GET: AdminDashboard/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -52,7 +52,7 @@ namespace parakeet.Controllers
 
             return View(design);
         }
-
+        [Authorize(Roles = "Admin")]
         // GET: AdminDashboard/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -68,7 +68,7 @@ namespace parakeet.Controllers
             }
             return View(design);
         }
-
+        [Authorize(Roles = "Admin")]
         // POST: AdminDashboard/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -103,7 +103,7 @@ namespace parakeet.Controllers
             }
             return View(design);
         }
-
+        [Authorize(Roles = "Admin")]
         // GET: AdminDashboard/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
@@ -121,7 +121,7 @@ namespace parakeet.Controllers
 
             return View(design);
         }
-
+        [Authorize(Roles = "Admin")]
         // POST: AdminDashboard/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
