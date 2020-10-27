@@ -5,9 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using parakeet.Models;
-using Microsoft.EntityFrameworkCore;
 using parakeet.Data;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.AspNetCore.Http;
 
 namespace parakeet.Controllers
@@ -53,7 +51,7 @@ namespace parakeet.Controllers
                 TempData["SizeName"] = sizeValues;
                 return RedirectToAction("Add", "Cart");
             }
-            return View(viewModel);
+            return RedirectToAction("Index");
 
         }
 
