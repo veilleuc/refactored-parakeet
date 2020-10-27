@@ -1,6 +1,6 @@
 ﻿@model ProductsViewModel
 
-<form asp-action="Index" methods="get">
+<form asp-action="Index" method="get">
     <div>
         <p align="center">
             <input type="text" name="searchDesign" value="" size="90" />
@@ -8,82 +8,85 @@
         </p>
     </div>
 </form>
+
+
 <div class="container">
     <div class="text-center">
         <h4 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: darkorange" class="text-center">First Choose Clothing Design</h4>
     </div>
 </div>
-<div class="container">
-    <div class="text-center">
-        <div class="btn btn-group-toggle" data-toggle="buttons">
-            <label class="btn btn-outline-info mr-5">
-                <input asp-for="ClothingTypes" type="radio" value="@Model.clothingTypes[0].type" autocomplete="off" style="color:darkorange">
-                Short Sleeve $20
-            </label>
 
-            <label class="btn btn-outline-info mr-5">
-                <input asp-for="ClothingTypes" type="radio" value="@Model.clothingTypes[1].type" autocomplete="off" style="color:darkorange">
-                Long Sleeve $35
-            </label>
+<form asp-action="Index" method="post">
+    <div class="container">
+        <div class="text-center">
+            <div class="btn btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-outline-info mr-5">
+                    <input asp-for="ClothingTypes" type="radio" value="@Model.clothingTypes[0].type" autocomplete="off" style="color:darkorange">
+                    Short Sleeve $20
+                </label>
 
-            <label class="btn btn-outline-info mr-5">
-                <input asp-for="ClothingTypes" type="radio" value="@Model.clothingTypes[2].type" autocomplete="off" style="color:darkorange">
-                Jacket $50
-            </label>
+                <label class="btn btn-outline-info mr-5">
+                    <input asp-for="ClothingTypes" type="radio" value="@Model.clothingTypes[1].type" autocomplete="off" style="color:darkorange">
+                    Long Sleeve $35
+                </label>
 
-            <label class="btn btn-outline-info mr-5">
-                <input asp-for="ClothingTypes" type="radio" value="@Model.clothingTypes[3].type" autocomplete="off" style="color:darkorange">
-                Hoodie $40
-            </label>
+                <label class="btn btn-outline-info mr-5">
+                    <input asp-for="ClothingTypes" type="radio" value="@Model.clothingTypes[2].type" autocomplete="off" style="color:darkorange">
+                    Jacket $50
+                </label>
+
+                <label class="btn btn-outline-info mr-5">
+                    <input asp-for="ClothingTypes" type="radio" value="@Model.clothingTypes[3].type" autocomplete="off" style="color:darkorange">
+                    Hoodie $40
+                </label>
+            </div>
+        </div>
+
+        <div> <p><br /></p></div>
+
+        <div class="text-center">
+            <div class="btn btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-outline-info mr-5">
+                    <input asp-for="Sizes" type="radio" value="@Model.sizes[0].SizeName" autocomplete="off" style="color:darkorange">
+                    X-Small
+                </label>
+
+                <label class="btn btn-outline-info mr-5">
+                    <input asp-for="Sizes" type="radio" value="@Model.sizes[1].SizeName" autocomplete="off" style="color:darkorange">
+                    Small
+                </label>
+
+                <label class="btn btn-outline-info mr-5">
+                    <input asp-for="Sizes" type="radio" value="@Model.sizes[2].SizeName" autocomplete="off" style="color:darkorange">
+                    Medium
+                </label>
+
+                <label class="btn btn-outline-info mr-5">
+                    <input asp-for="Sizes" type="radio" value="@Model.sizes[3].SizeName" autocomplete="off" style="color:darkorange">
+                    Large
+                </label>
+
+                <label class="btn btn-outline-info mr-5">
+                    <input asp-for="Sizes" type="radio" value="@Model.sizes[4].SizeName" autocomplete="off" style="color:darkorange">
+                    X-Large
+                </label>
+
+                <label class="btn btn-outline-info mr-5">
+                    <input asp-for="Sizes" type="radio" value="@Model.sizes[5].SizeName" autocomplete="off" style="color:darkorange">
+                    XX-Large
+                </label>
+            </div>
         </div>
     </div>
 
     <div> <p><br /></p></div>
 
-    <div class="text-center">
-        <div class="btn btn-group-toggle" data-toggle="buttons">
-            <label class="btn btn-outline-info mr-5">
-                <input asp-for="Sizes" type="radio" value="@Model.sizes[0].SizeName" autocomplete="off" style="color:darkorange">
-                X-Small
-            </label>
-
-            <label class="btn btn-outline-info mr-5">
-                <input asp-for="Sizes" type="radio" value="@Model.sizes[1].SizeName" autocomplete="off" style="color:darkorange">
-                Small
-            </label>
-
-            <label class="btn btn-outline-info mr-5">
-                <input asp-for="Sizes" type="radio" value="@Model.sizes[2].SizeName" autocomplete="off" style="color:darkorange">
-                Medium
-            </label>
-
-            <label class="btn btn-outline-info mr-5">
-                <input asp-for="Sizes" type="radio" value="@Model.sizes[3].SizeName" autocomplete="off" style="color:darkorange">
-                Large
-            </label>
-
-            <label class="btn btn-outline-info mr-5">
-                <input asp-for="Sizes" type="radio" value="@Model.sizes[4].SizeName" autocomplete="off" style="color:darkorange">
-                X-Large
-            </label>
-
-            <label class="btn btn-outline-info mr-5">
-                <input asp-for="Sizes" type="radio" value="@Model.sizes[5].SizeName" autocomplete="off" style="color:darkorange">
-                XX-Large
-            </label>
-        </div>
-    </div>
-</div>
-
-<div> <p><br /></p></div>
-
-
-@if (Model == null)
-{
-    <h1 style=" font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif" class="font-weight-bold  text-center">There are no designs to display</h1>
-}
-else
-{
+    @if (Model == null)
+    {
+        <h1 style=" font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif" class="font-weight-bold  text-center">There are no designs to display</h1>
+    }
+    else
+    {
         <div class="container">
             <div class="text-center">
                 <div class="btn-group-toggle" data-toggle="buttons">
@@ -98,10 +101,11 @@ else
                 </div>
             </div>
         </div>
-}
+    }
 
     <div> <p><br /></p></div>
 
-    <div class="align-bottom text-center">
-        <a asp-action="Index"> <button style="color:darkorange" class="btn btn-outline-info btn-lg"> Add to Cart </button> </a>
+    <div class="form-group text-center">
+        <input type="submit" value="Add to Cart" class="btn btn-primary btn-lg" style="color: darkorange" />
     </div>
+</form>

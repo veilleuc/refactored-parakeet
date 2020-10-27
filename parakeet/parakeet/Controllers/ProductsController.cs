@@ -8,6 +8,7 @@ using parakeet.Models;
 using Microsoft.EntityFrameworkCore;
 using parakeet.Data;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Microsoft.AspNetCore.Http;
 
 namespace parakeet.Controllers
 {
@@ -17,16 +18,45 @@ namespace parakeet.Controllers
 
         public ProductsController(ApplicationDbContext context)
         {
+            //Db access for arrays in the model
             _context = context;
         }
-        public IActionResult Index(ProductsViewModel viewModel)
+        public IActionResult Index()
         {
+            //initialize variable for inputs into arrays
+            ProductsViewModel viewModel = new ProductsViewModel();
+
+            //inputing all the type into their specific arrays
             viewModel.designs = _context.Designs.ToArray();
             viewModel.clothingTypes = _context.ClothingTypes.ToArray();
             viewModel.sizes = _context.Sizes.ToArray();
 
             return View(viewModel);
         }
+
+        [HttpPost]
+        public IActionResult Index([Bind("Designs, ClothingTypes, Sizes")] ProductsViewModel viewModel)
+        {
+
+            //checking if all buttons have been pressed
+            if (ModelState.IsValid)
+            {
+
+                //values for the buttons in the view
+                var designvalues = viewModel.Designs;
+                var clothingTypeValues = viewModel.ClothingTypes;
+                var sizeValues = viewModel.Sizes;
+
+                // add an item to the cart
+                TempData["ClothingName"] = clothingTypeValues;
+                TempData["DesignName"] = designvalues;
+                TempData["SizeName"] = sizeValues;
+                return RedirectToAction("Add", "Cart");
+            }
+            return View(viewModel);
+
+        }
+
         public IActionResult Privacy()
         {
             return View();
