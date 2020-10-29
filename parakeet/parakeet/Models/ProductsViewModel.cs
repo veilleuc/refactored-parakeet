@@ -22,6 +22,6 @@ namespace parakeet.Models
         [Required]
         public string Sizes { get; set; }
         [Required]
-        public string Designs { get; set; }
+        public int Designs { get; set; }
     }
 }

@@ -49,14 +49,14 @@ namespace parakeet.Controllers
         // GET: CartController/Add
         public async Task<ActionResult> AddAsync()
         {
-            string clothingID = (string)TempData["ClothingName"];
-            string designID = (string)TempData["DesignName"];
-            string sizeID = (string)TempData["SizeName"];
+            string clothingName = (string)TempData["ClothingName"];
+            int designID = (int)TempData["DesignID"];
+            string sizeName = (string)TempData["SizeName"];
 
             // pull items from database related to the product chosen
-            ClothingType type = await _context.ClothingTypes.FirstOrDefaultAsync(c => c.type == clothingID);
-            Design design1 = await _context.Designs.FirstOrDefaultAsync(d => d.DesignName == designID);
-            Size size1 = await _context.Sizes.FirstOrDefaultAsync(s => s.SizeName == sizeID);
+            ClothingType type = await _context.ClothingTypes.FirstOrDefaultAsync(c => c.type == clothingName);
+            Design design1 = await _context.Designs.FirstOrDefaultAsync(d => d.DesignId == designID);
+            Size size1 = await _context.Sizes.FirstOrDefaultAsync(s => s.SizeName == sizeName);
 
             // create a new cartitem obj
             CartItem item = new CartItem

@@ -47,7 +47,7 @@ namespace parakeet.Controllers
 
                 // add an item to the cart
                 TempData["ClothingName"] = clothingTypeValues;
-                TempData["DesignName"] = designvalues;
+                TempData["DesignID"] = designvalues;
                 TempData["SizeName"] = sizeValues;
                 return RedirectToAction("Add", "Cart");
             }
