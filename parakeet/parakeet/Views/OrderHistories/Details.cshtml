@@ -4,10 +4,10 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<h1 class="text-center">Order Details</h1>
 
 <div>
-    <h4>OrderHistory</h4>
+    
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -19,8 +19,8 @@
     </dl>
 </div>
 <div>
-   
-    <a asp-action="Index">Back to List</a>
+
+    <a  asp-action="Index"> <button style="color:darkorange" class="btn btn-outline-info btn-lg align-content-center"> Back To List </button> </a>
 </div>
 
 <h1>Order Items</h1>
@@ -58,7 +58,7 @@
                 @Html.DisplayFor(modelItem => item.Size.SizeName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ClothingType.price)
+                $@Html.DisplayFor(modelItem => item.ClothingType.price)
             </td>
         </tr>
 }
