@@ -21,8 +21,9 @@ namespace parakeet.Models
         public int Popularitycounter { get; set; }
 
         // makes these optional (?) for time being so that images can be viewed without approval
+        [Display(Name = "Approved")]
         public bool? Approved { get; set; }
-
+        [Display(Name = "Admin Viewed")]
         public bool? AdminViewed { get; set; }
 
         // filter tags
