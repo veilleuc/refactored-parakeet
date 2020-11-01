@@ -25,7 +25,7 @@ namespace parakeet.Controllers
             ProductsViewModel viewModel = new ProductsViewModel();
 
             //inputing all the type into their specific arrays
-            viewModel.designs = _context.Designs.ToArray();
+            viewModel.designs = _context.Designs.Where(d => d.Approved == true).ToArray();
             viewModel.clothingTypes = _context.ClothingTypes.ToArray();
             viewModel.sizes = _context.Sizes.ToArray();
 
