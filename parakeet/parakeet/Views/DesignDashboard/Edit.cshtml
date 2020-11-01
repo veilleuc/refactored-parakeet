@@ -1,0 +1,50 @@
+﻿@model parakeet.Models.Design
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Design Approval</h1>
+
+<h4>Design</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="DesignArray" />
+            <input type="hidden" asp-for="DesignName" />
+            <input type="hidden" asp-for="DesignId" />
+            <input type="hidden" asp-for="NatureTag" />
+            <input type="hidden" asp-for="FunnyTag" />
+            <input type="hidden" asp-for="AbstractTag" />
+            <input type="hidden" asp-for="GameTag" />
+            <input type="hidden" asp-for="MusicTag" />
+            <input type="hidden" asp-for="MovieTag" />
+            <input type="hidden" asp-for="CoolTag" />
+            <input type="hidden" asp-for="UserId" />
+
+            <div class="form-group">
+                <label asp-for="Approved" class="control-label"></label>
+                <input asp-for="Approved" class="form-control" />
+                <span asp-validation-for="Approved" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AdminViewed" class="control-label"></label>
+                <input asp-for="AdminViewed" class="form-control" />
+                <span asp-validation-for="AdminViewed" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
