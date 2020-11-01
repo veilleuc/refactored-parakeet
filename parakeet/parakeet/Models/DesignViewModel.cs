@@ -23,6 +23,7 @@ namespace parakeet.Models
         public int Popularitycounter { get; set; }
 
         // makes these optional (?) for time being so that images can be viewed without approval
+        
         public bool? Approved { get; set; }
 
         public bool? AdminViewed { get; set; }
