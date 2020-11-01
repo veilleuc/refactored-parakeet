@@ -1,21 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\johns\\source\\repos\\refactored-parakeet\\parakeet\\parakeet\\parakeet.csproj": {}
+    "C:\\Users\\jdogg\\csci540_proj\\refactored-parakeet\\parakeet\\parakeet\\parakeet.csproj": {}
   },
   "projects": {
-    "C:\\Users\\johns\\source\\repos\\refactored-parakeet\\parakeet\\parakeet\\parakeet.csproj": {
+    "C:\\Users\\jdogg\\csci540_proj\\refactored-parakeet\\parakeet\\parakeet\\parakeet.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\johns\\source\\repos\\refactored-parakeet\\parakeet\\parakeet\\parakeet.csproj",
+        "projectUniqueName": "C:\\Users\\jdogg\\csci540_proj\\refactored-parakeet\\parakeet\\parakeet\\parakeet.csproj",
         "projectName": "parakeet",
-        "projectPath": "C:\\Users\\johns\\source\\repos\\refactored-parakeet\\parakeet\\parakeet\\parakeet.csproj",
-        "packagesPath": "C:\\Users\\johns\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\johns\\source\\repos\\refactored-parakeet\\parakeet\\parakeet\\obj\\",
+        "projectPath": "C:\\Users\\jdogg\\csci540_proj\\refactored-parakeet\\parakeet\\parakeet\\parakeet.csproj",
+        "packagesPath": "C:\\Users\\jdogg\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jdogg\\csci540_proj\\refactored-parakeet\\parakeet\\parakeet\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\johns\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\jdogg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -89,7 +93,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

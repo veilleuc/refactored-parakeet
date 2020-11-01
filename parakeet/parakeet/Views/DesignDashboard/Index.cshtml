@@ -1,10 +1,12 @@
 ﻿@model IEnumerable<parakeet.Models.Design>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Designer Dashboard";
 }
 
 <h1 style="color:darkorange" style2="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif" class="text-left">Designer Dashboard</h1>
+<a asp-controller="Designs" asp-action="Create"> <button style="color:darkorange" class="btn btn-outline-info btn-lg"> Add New Design </button> </a>
+
 
 <table class="table">
     <thead>
@@ -21,19 +23,27 @@
     <tbody>
         @foreach (var item in Model)
         {
-            
+
             <tr>
                 <td>
                     <img id="profilePicture" style="width:150px;height:160px; object-fit:cover" src="data:image/*;base64,@(Convert.ToBase64String(item.DesignArray))">
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Approved)
+                    @if(item.Approved == true)
+                    {
+                        <p>True</p>
+                    }
+                    else
+                    {
+                        <p>False</p>
+                    }
+
                 </td>
                 <td>
                     <a asp-action="Delete" asp-route-id="@item.DesignId">Delete</a>
                 </td>
             </tr>
-            
+
         }
     </tbody>
 </table>

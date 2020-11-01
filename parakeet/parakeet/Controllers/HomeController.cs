@@ -24,7 +24,8 @@ namespace parakeet.Controllers
         
         public IActionResult Index()
         {
-            Design[] designs = _context.Designs.ToArray();
+            // only pull designs that have been approved
+            Design[] designs = _context.Designs.Where(d => d.Approved == true).ToArray();
 
             // sort the designs by popularity
             // this will sort them from lowest to highest so must get last 5 designs

@@ -2112,3 +2112,8 @@ C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netc
 C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\DesignDashboard\Details.cshtml.g.cs
 C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\DesignDashboard\Edit.cshtml.g.cs
 C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\DesignDashboard\Index.cshtml.g.cs
+C:\Users\jdogg\csci540_proj\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\DesignDashboard\Create.cshtml.g.cs
+C:\Users\jdogg\csci540_proj\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\DesignDashboard\Delete.cshtml.g.cs
+C:\Users\jdogg\csci540_proj\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\DesignDashboard\Details.cshtml.g.cs
+C:\Users\jdogg\csci540_proj\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\DesignDashboard\Edit.cshtml.g.cs
+C:\Users\jdogg\csci540_proj\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\DesignDashboard\Index.cshtml.g.cs
