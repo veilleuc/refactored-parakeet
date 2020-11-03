@@ -1,5 +1,6 @@
 ﻿@using parakeet.Models
 @inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
 @{
     var hasExternalLogins = (await SignInManager.GetExternalAuthenticationSchemesAsync()).Any();
 }
@@ -7,10 +8,24 @@
     <li class="nav-item"><a class="nav-link @ManageNavPages.IndexNavClass(ViewContext)" id="profile" asp-page="./Index">Profile</a></li>
     <li class="nav-item"><a class="nav-link @ManageNavPages.EmailNavClass(ViewContext)" id="email" asp-page="./Email">Email</a></li>
     <li class="nav-item"><a class="nav-link @ManageNavPages.ChangePasswordNavClass(ViewContext)" id="change-password" asp-page="./ChangePassword">Password</a></li>
+    @if (User.IsInRole("Admin"))
+    {
+        // redirect to home until admin creation page has been made
+        <li class="nav-item">
+            <a class="nav-link " asp-area="" asp-controller="Home" asp-action="Index">Create New Admin</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " asp-area="" asp-controller="AdminDashboard" asp-action="Index">Dashboard</a>
+        </li>
+    }
+    else
+    {
+        // if user is a basic role
     <li class="nav-item">
         <a class="nav-link " asp-area="" asp-controller="Designs" asp-action="Create">Submit A Design</a>
     </li>
     <li class="nav-item">
         <a class="nav-link " asp-area="" asp-controller="OrderHistories" asp-action="Index">View Order History</a>
     </li>
+    }
 </ul>
