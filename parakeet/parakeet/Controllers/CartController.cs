@@ -189,11 +189,12 @@ namespace parakeet.Controllers
 
                 _context.SaveChanges();
 
-                // reset the cart 
-                cart = new List<CartItem>();
-                // store the new cart back in session
-                SessionHelper.SetObjectAsJson(HttpContext.Session, "cart", cart);
+                
             }
+            // reset the cart 
+            cart = new List<CartItem>();
+            // store the new cart back in session
+            SessionHelper.SetObjectAsJson(HttpContext.Session, "cart", cart);
 
             return View();
         }
