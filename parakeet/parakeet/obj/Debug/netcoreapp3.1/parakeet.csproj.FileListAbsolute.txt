@@ -1559,6 +1559,31 @@ C:\Users\jdogg\csci540_proj\refactored-parakeet\parakeet\parakeet\obj\Debug\netc
 C:\Users\jdogg\csci540_proj\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\AdminDashboard\Details.cshtml.g.cs
 C:\Users\jdogg\csci540_proj\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\AdminDashboard\Edit.cshtml.g.cs
 C:\Users\jdogg\csci540_proj\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\AdminDashboard\Index.cshtml.g.cs
+C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.parakeet - Web Deploy.json
+C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\bin\Debug\netcoreapp3.1\Properties\ServiceDependencies\parakeet - Web Deploy\mssql2.arm.json
+C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\bin\Debug\netcoreapp3.1\Properties\ServiceDependencies\parakeet - Web Deploy\profile.arm.json
+C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\AdminDashboard\Create.cshtml.g.cs
+C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\AdminDashboard\Delete.cshtml.g.cs
+C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\AdminDashboard\Details.cshtml.g.cs
+C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\AdminDashboard\Edit.cshtml.g.cs
+C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\AdminDashboard\Index.cshtml.g.cs
+C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\Cart\Checkout.cshtml.g.cs
+C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\Cart\Confirm.cshtml.g.cs
+C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\Cart\Index.cshtml.g.cs
+C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\Products\Index.cshtml.g.cs
+C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\Products\Privacy.cshtml.g.cs
+C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\Sizes\Create.cshtml.g.cs
+C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\Sizes\Delete.cshtml.g.cs
+C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\Sizes\Details.cshtml.g.cs
+C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\Sizes\Edit.cshtml.g.cs
+C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\Sizes\Index.cshtml.g.cs
+C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\Test\Create.cshtml.g.cs
+C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\DesignDashboard\Create.cshtml.g.cs
+C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\DesignDashboard\Delete.cshtml.g.cs
+C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\DesignDashboard\Details.cshtml.g.cs
+C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\DesignDashboard\Edit.cshtml.g.cs
+C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\DesignDashboard\Index.cshtml.g.cs
+C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\bin\Debug\netcoreapp3.1\web.config
 C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
@@ -2046,6 +2071,11 @@ C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp
 C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\ClothingTypes\Details.cshtml.g.cs
 C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\ClothingTypes\Edit.cshtml.g.cs
 C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\ClothingTypes\Index.cshtml.g.cs
+C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\DesignDashboard\Create.cshtml.g.cs
+C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\DesignDashboard\Delete.cshtml.g.cs
+C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\DesignDashboard\Details.cshtml.g.cs
+C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\DesignDashboard\Edit.cshtml.g.cs
+C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\DesignDashboard\Index.cshtml.g.cs
 C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\Designs\Create.cshtml.g.cs
 C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\Designs\Delete.cshtml.g.cs
 C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\Designs\Details.cshtml.g.cs
@@ -2087,28 +2117,3 @@ C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp
 C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\parakeet.dll
 C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\parakeet.pdb
 C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\parakeet.genruntimeconfig.cache
-C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\parakeet.csprojAssemblyReference.cache
-C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.parakeet - Web Deploy.json
-C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\bin\Debug\netcoreapp3.1\Properties\ServiceDependencies\parakeet - Web Deploy\mssql2.arm.json
-C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\bin\Debug\netcoreapp3.1\Properties\ServiceDependencies\parakeet - Web Deploy\profile.arm.json
-C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\AdminDashboard\Create.cshtml.g.cs
-C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\AdminDashboard\Delete.cshtml.g.cs
-C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\AdminDashboard\Details.cshtml.g.cs
-C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\AdminDashboard\Edit.cshtml.g.cs
-C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\AdminDashboard\Index.cshtml.g.cs
-C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\Cart\Checkout.cshtml.g.cs
-C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\Cart\Confirm.cshtml.g.cs
-C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\Cart\Index.cshtml.g.cs
-C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\Products\Index.cshtml.g.cs
-C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\Products\Privacy.cshtml.g.cs
-C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\Sizes\Create.cshtml.g.cs
-C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\Sizes\Delete.cshtml.g.cs
-C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\Sizes\Details.cshtml.g.cs
-C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\Sizes\Edit.cshtml.g.cs
-C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\Sizes\Index.cshtml.g.cs
-C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\Test\Create.cshtml.g.cs
-C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\DesignDashboard\Create.cshtml.g.cs
-C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\DesignDashboard\Delete.cshtml.g.cs
-C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\DesignDashboard\Details.cshtml.g.cs
-C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\DesignDashboard\Edit.cshtml.g.cs
-C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Views\DesignDashboard\Index.cshtml.g.cs

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\johns\\source\\repos\\refactored-parakeet\\parakeet\\parakeet\\parakeet.csproj": {}
+    "C:\\Users\\aceun\\github\\refactored-parakeet\\parakeet\\parakeet\\parakeet.csproj": {}
   },
   "projects": {
-    "C:\\Users\\johns\\source\\repos\\refactored-parakeet\\parakeet\\parakeet\\parakeet.csproj": {
+    "C:\\Users\\aceun\\github\\refactored-parakeet\\parakeet\\parakeet\\parakeet.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\johns\\source\\repos\\refactored-parakeet\\parakeet\\parakeet\\parakeet.csproj",
+        "projectUniqueName": "C:\\Users\\aceun\\github\\refactored-parakeet\\parakeet\\parakeet\\parakeet.csproj",
         "projectName": "parakeet",
-        "projectPath": "C:\\Users\\johns\\source\\repos\\refactored-parakeet\\parakeet\\parakeet\\parakeet.csproj",
-        "packagesPath": "C:\\Users\\johns\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\johns\\source\\repos\\refactored-parakeet\\parakeet\\parakeet\\obj\\",
+        "projectPath": "C:\\Users\\aceun\\github\\refactored-parakeet\\parakeet\\parakeet\\parakeet.csproj",
+        "packagesPath": "C:\\Users\\aceun\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\aceun\\github\\refactored-parakeet\\parakeet\\parakeet\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\johns\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\aceun\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -89,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

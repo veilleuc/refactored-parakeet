@@ -73,6 +73,7 @@ namespace parakeet.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [RequestSizeLimit(1048576000)]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("DesignId,DesignArray,DesignName,Popularitycounter,Approved,AdminViewed,NatureTag,FunnyTag,AbstractTag,GameTag,MusicTag,MovieTag,CoolTag,UserId")] Design design)
         {
