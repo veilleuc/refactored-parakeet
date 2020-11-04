@@ -2009,6 +2009,7 @@ C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\bin\Debug\netcoreapp
 C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\parakeet.csprojAssemblyReference.cache
 C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\parakeet.AssemblyInfoInputs.cache
 C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\parakeet.AssemblyInfo.cs
 C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\parakeet.csproj.CoreCompileInputs.cache
