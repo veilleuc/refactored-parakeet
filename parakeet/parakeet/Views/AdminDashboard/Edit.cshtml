@@ -26,7 +26,7 @@
             <input type="hidden" asp-for="UserId" />
 
             <div class="form-group">
-                <label asp-for="Approved" class="control-label"></label>
+                <label asp-for="Approved" class="control-label">Approve</label>
                 @Html.DropDownListFor(model => model.Approved, new List<SelectListItem>()
                     {
                        new SelectListItem() { Text = "Yes", Value = "True" },
