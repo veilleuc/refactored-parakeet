@@ -18,6 +18,7 @@ namespace parakeet.Models
 
         [Required]
         [Display(Name = "Design Name")]
+        [StringLength(20, ErrorMessage = "Name length can not exceed 20 characters.")]
         public string DesignName { get; set; }
 
         public int Popularitycounter { get; set; }
