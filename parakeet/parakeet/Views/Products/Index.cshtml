@@ -106,6 +106,7 @@
                 <div class="btn-group-toggle" data-toggle="buttons">
                     @for (int i = 0; Model.designs.Length > i; i++)
                     {
+                        @if (i%5 == 0 & i != 0){ <div> <p><br /></p></div>}
                         <div class="btn btn-outline-info mr-3">
                             <input asp-for="Designs" type="radio" value="@Model.designs[i].DesignId" autocomplete="off" style="color:darkorange">
                             <img id="profilePicture" style="width:150px;height:160px; object-fit:cover" src="data:image/*;base64,@(Convert.ToBase64String(Model.designs[i].DesignArray))">
