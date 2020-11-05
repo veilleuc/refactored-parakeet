@@ -1,7 +1,7 @@
 ﻿@page
-@model RegisterModel
+@model AdminRegisterModel
 @{
-    ViewData["Title"] = "Register";
+    ViewData["Title"] = "Register new admin";
 }
 
 <h1 style=" font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color:darkorange">@ViewData["Title"]</h1>
@@ -9,7 +9,7 @@
 <div class="row">
     <div class="col-md-4">
         <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
-            <h4 style=" font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color:darkorange">Create a new account.</h4>
+            <h4 style=" font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color:darkorange">Create a new admin account.</h4>
             <hr />
             <div asp-validation-summary="All" class="text-danger"></div>
             <div class="form-group">
@@ -22,11 +22,7 @@
                 <input asp-for="Input.LastName" class="form-control" />
                 <span asp-validation-for="Input.LastName" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Input.Address"></label>
-                <input asp-for="Input.Address" class="form-control" />
-                <span asp-validation-for="Input.Address" class="text-danger"></span>
-            </div>
+          
             <div class="form-group">
                 <label asp-for="Input.Email"></label>
                 <input asp-for="Input.Email" class="form-control" />
@@ -45,7 +41,7 @@
             <button type="submit" class="btn btn-primary">Register</button>
         </form>
     </div>
-   
+    
 </div>
 
 @section Scripts {
