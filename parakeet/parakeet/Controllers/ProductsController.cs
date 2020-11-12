@@ -37,7 +37,7 @@ namespace parakeet.Controllers
         {
 
             //checking if all buttons have been pressed
-            if (ModelState.IsValid)
+            if (ModelState.IsValid && viewModel.Designs > 0 )
             {
 
                 //values for the buttons in the view

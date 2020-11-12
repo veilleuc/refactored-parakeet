@@ -1,4 +1,4 @@
-﻿@model IEnumerable<parakeet.Models.Design>
+﻿@model List<parakeet.Models.Design>
 
 @{
     ViewData["Title"] = "Designer Dashboard";
@@ -7,15 +7,16 @@
 <h1 style="color:darkorange" style2="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif" class="text-left">Designer Dashboard</h1>
 <a asp-controller="Designs" asp-action="Create"> <button style="color:darkorange" class="btn btn-outline-info btn-lg"> Add New Design </button> </a>
 
-
+@if (Model.Count > 0)
+{
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.DesignName)
+               Design Name
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Approved)
+                Admin Approved
             </th>
             <th></th>
         </tr>
@@ -29,13 +30,13 @@
                     <img id="profilePicture" style="width:150px;height:160px; object-fit:cover" src="data:image/*;base64,@(Convert.ToBase64String(item.DesignArray))">
                 </td>
                 <td>
-                    @if(item.Approved == true)
+                    @if (item.Approved == true)
                     {
-                        <p>True</p>
+                        <p>Yes</p>
                     }
                     else
                     {
-                        <p>False</p>
+                        <p>No</p>
                     }
 
                 </td>
@@ -47,3 +48,4 @@
         }
     </tbody>
 </table>
+}

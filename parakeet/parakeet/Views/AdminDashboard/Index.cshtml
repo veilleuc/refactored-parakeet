@@ -1,22 +1,24 @@
-﻿@model IEnumerable<parakeet.Models.Design>
+﻿@model List<parakeet.Models.Design>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Admin Dashboard";
 }
 
 <h1 style="color:darkorange" style2="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif" class="text-left">Admin Dashboard</h1>
-
+@if (Model.Count > 0)
+{
 <table class="table">
     <thead>
         <tr>
             <th>
-                <h4 style=" font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif" class="text-left">Design</h4>
+                <h4 style=" font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif" class="text-left">Designs to Review</h4>
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+@foreach (var item in Model)
+{
         <tr>
             <td>
                 <img id="profilePicture" style="width:150px;height:160px; object-fit:cover" src="data:image/*;base64,@(Convert.ToBase64String(item.DesignArray))">
@@ -28,3 +30,9 @@
 }
     </tbody>
 </table>
+}
+else
+{
+    <p class="text-left" style=" font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">There are currently no Designs to Review. Please return at a later time.</p>
+}
+
