@@ -22,14 +22,19 @@
             <input type="hidden" asp-for="MovieTag" />
             <input type="hidden" asp-for="CoolTag" />
             <input type="hidden" asp-for="UserId" />
-
+            <div>
+                <img id="profilePicture" style="width:200px;height:210px; object-fit:cover" src="data:image/*;base64,@(Convert.ToBase64String(Model.DesignArray))">
+            </div>
+            <div>
+                <p style="font-family:'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif'">@Model.DesignName</p>
+            </div>
             <div class="form-group">
                 <label asp-for="Approved" class="control-label">Approve</label>
                 @Html.DropDownListFor(model => model.Approved, new List<SelectListItem>()
                     {
                        new SelectListItem() { Text = "Yes", Value = "True" },
                        new SelectListItem() { Text = "No", Value = "False"}
-                    }, new { @id = "Approved", @class="form-control" })
+                    }, new { @id = "Approved", @class = "form-control" })
                 <span asp-validation-for="Approved" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -38,7 +43,7 @@
                     {
                        new SelectListItem() { Text = "Yes", Value = "True" },
                        new SelectListItem() { Text = "No", Value = "False"}
-                    }, new { @id = "AdminViewed", @class="form-control" })
+                    }, new { @id = "AdminViewed", @class = "form-control" })
                 <span asp-validation-for="AdminViewed" class="text-danger"></span>
             </div>
             <div class="form-group">

@@ -13,7 +13,10 @@
     <thead>
         <tr>
             <th>
-               Design Name
+                Design
+            </th>
+            <th>
+                Design Name
             </th>
             <th>
                 Admin Approved
@@ -25,25 +28,28 @@
         @foreach (var item in Model)
         {
 
-            <tr>
-                <td>
-                    <img id="profilePicture" style="width:150px;height:160px; object-fit:cover" src="data:image/*;base64,@(Convert.ToBase64String(item.DesignArray))">
-                </td>
-                <td>
-                    @if (item.Approved == true)
-                    {
-                        <p>Yes</p>
-                    }
-                    else
-                    {
-                        <p>No</p>
-                    }
+        <tr>
+            <td>
+                <img id="profilePicture" style="width:150px;height:160px; object-fit:cover" src="data:image/*;base64,@(Convert.ToBase64String(item.DesignArray))">
+            </td>
+            <td>
+                <p style="font-family:'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif'">@item.DesignName</p>
+            </td>
+            <td>
+                @if (item.Approved == true)
+                {
+                    <p style="font-family:'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif'">Yes</p>
+                }
+                else
+                {
+                    <p style="font-family:'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif'">No</p>
+                }
 
-                </td>
-                <td>
-                    <a asp-action="Delete" asp-route-id="@item.DesignId">Delete</a>
-                </td>
-            </tr>
+            </td>
+            <td>
+                <a asp-action="Delete" asp-route-id="@item.DesignId">Delete</a>
+            </td>
+        </tr>
 
         }
     </tbody>
