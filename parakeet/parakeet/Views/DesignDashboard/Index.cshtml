@@ -1,4 +1,4 @@
-﻿@model IEnumerable<parakeet.Models.Design>
+﻿@model List<parakeet.Models.Design>
 
 @{
     ViewData["Title"] = "Designer Dashboard";
@@ -7,15 +7,19 @@
 <h1 style="color:darkorange" style2="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif" class="text-left">Designer Dashboard</h1>
 <a asp-controller="Designs" asp-action="Create"> <button style="color:darkorange" class="btn btn-outline-info btn-lg"> Add New Design </button> </a>
 
-
+@if (Model.Count > 0)
+{
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.DesignName)
+                Design
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Approved)
+                Design Name
+            </th>
+            <th>
+                Admin Approved
             </th>
             <th></th>
         </tr>
@@ -24,26 +28,30 @@
         @foreach (var item in Model)
         {
 
-            <tr>
-                <td>
-                    <img id="profilePicture" style="width:150px;height:160px; object-fit:cover" src="data:image/*;base64,@(Convert.ToBase64String(item.DesignArray))">
-                </td>
-                <td>
-                    @if(item.Approved == true)
-                    {
-                        <p>True</p>
-                    }
-                    else
-                    {
-                        <p>False</p>
-                    }
+        <tr>
+            <td>
+                <img id="profilePicture" style="width:150px;height:160px; object-fit:cover" src="data:image/*;base64,@(Convert.ToBase64String(item.DesignArray))">
+            </td>
+            <td>
+                <p style="font-family:'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif'">@item.DesignName</p>
+            </td>
+            <td>
+                @if (item.Approved == true)
+                {
+                    <p style="font-family:'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif'">Yes</p>
+                }
+                else
+                {
+                    <p style="font-family:'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif'">No</p>
+                }
 
-                </td>
-                <td>
-                    <a asp-action="Delete" asp-route-id="@item.DesignId">Delete</a>
-                </td>
-            </tr>
+            </td>
+            <td>
+                <a asp-action="Delete" asp-route-id="@item.DesignId">Delete</a>
+            </td>
+        </tr>
 
         }
     </tbody>
 </table>
+}

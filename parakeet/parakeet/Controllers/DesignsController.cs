@@ -73,7 +73,9 @@ namespace parakeet.Controllers
         public async Task<IActionResult> Create([Bind("DesignId,DesignArray,DesignName,Popularitycounter,Approved,AdminViewed,NatureTag,FunnyTag,AbstractTag,GameTag,MusicTag,MovieTag,CoolTag,UserId")] DesignViewModel designview)
         {
             // convert Design view to a Designs obj
-            if (ModelState.IsValid)
+            if (ModelState.IsValid && ((Path.GetExtension(designview.DesignArray.FileName).ToLower() == ".jpg") ||
+                (Path.GetExtension(designview.DesignArray.FileName).ToLower() == ".jpeg") ||
+                (Path.GetExtension(designview.DesignArray.FileName).ToLower() == ".png")))
             {
                 Design design = new Design
                 {
@@ -88,9 +90,9 @@ namespace parakeet.Controllers
                     MovieTag = designview.MovieTag,
                     MusicTag = designview.MusicTag,
                     NatureTag = designview.NatureTag,
-                    
+
                 };
-                
+
                 // convert image to a Byte Array
                 IFormFile file = designview.DesignArray;
                 using (var dataStream = new MemoryStream())
@@ -101,15 +103,26 @@ namespace parakeet.Controllers
 
                 // assign user to the design
                 design.ApplicationUser = await _userManager.GetUserAsync(User);
-                
+
                 // add design to table
                 _context.Add(design);
                 await _context.SaveChangesAsync();
 
                 // redirect back to designs index page
-                return RedirectToAction("Index","Home");
+                return RedirectToAction("Index", "DesignDashboard");
             }
-            return View(designview);
+            else if (ModelState.IsValid)
+            {
+                // the model is valid but the user tried to submit something other than image
+                ViewData["imageError"] = "Image must either: .jpg, .jpeg, .png";
+                return View(designview);
+            }
+            else
+            {
+                // model was not valid
+                ViewData["imageError"] = "";
+                return View(designview);
+            }
         }
 
         // GET: Designs/Edit/5
