@@ -1607,12 +1607,6 @@ C:\Users\xzavi\Source\Repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netc
 C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\bin\Debug\netcoreapp3.1\web.config
 C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\bin\Debug\netcoreapp3.1\appsettings.json
-C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
-C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.json
-C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.local.json
-C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.parakeet - Web Deploy.json
-C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\bin\Debug\netcoreapp3.1\Properties\ServiceDependencies\parakeet - Web Deploy\mssql2.arm.json
-C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\bin\Debug\netcoreapp3.1\Properties\ServiceDependencies\parakeet - Web Deploy\profile.arm.json
 C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\bin\Debug\netcoreapp3.1\parakeet.StaticWebAssets.xml
 C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\bin\Debug\netcoreapp3.1\parakeet.exe
 C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\bin\Debug\netcoreapp3.1\parakeet.deps.json
@@ -2030,7 +2024,6 @@ C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\bin\Debug\netcoreapp
 C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\parakeet.csprojAssemblyReference.cache
 C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\parakeet.AssemblyInfoInputs.cache
 C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\parakeet.AssemblyInfo.cs
 C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\parakeet.csproj.CoreCompileInputs.cache
@@ -2038,6 +2031,9 @@ C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp
 C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\parakeet.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\parakeet.RazorAssemblyInfo.cache
 C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\parakeet.RazorAssemblyInfo.cs
+C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\staticwebassets\parakeet.StaticWebAssets.Manifest.cache
+C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\staticwebassets\parakeet.StaticWebAssets.xml
+C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\scopedcss\bundle\parakeet.styles.css
 C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\parakeet.TagHelpers.input.cache
 C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\parakeet.TagHelpers.output.cache
 C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\parakeet.RazorCoreGenerate.cache
@@ -2135,8 +2131,6 @@ C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp
 C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\parakeet.RazorTargetAssemblyInfo.cs
 C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\parakeet.Views.pdb
 C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\parakeet.csproj.CopyComplete
-C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\staticwebassets\parakeet.StaticWebAssets.Manifest.cache
-C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\staticwebassets\parakeet.StaticWebAssets.xml
 C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\parakeet.dll
 C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\parakeet.pdb
 C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\parakeet.genruntimeconfig.cache

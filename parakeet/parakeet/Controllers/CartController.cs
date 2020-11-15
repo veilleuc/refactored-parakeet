@@ -148,7 +148,7 @@ namespace parakeet.Controllers
 
             // check if the buyer is a guest or is a signed in user
             // if they are then the cart must be added to their orderhistory so it can be viewed later
-            if (_signInManager.IsSignedIn(User))
+            if (_signInManager.IsSignedIn(User) & cart != null & cart.Count != 0)
             {
                 // get the current time so it can be used for OderHistory accessing
                 DateTime OrderCreationTime = DateTime.Now;

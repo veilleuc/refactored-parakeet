@@ -148,6 +148,7 @@ namespace parakeet.Controllers
         }
 
         // GET: OrderHistories/Delete/5
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -166,6 +167,7 @@ namespace parakeet.Controllers
         }
 
         // POST: OrderHistories/Delete/5
+        [Authorize(Roles = "Admin")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
