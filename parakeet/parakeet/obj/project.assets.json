@@ -9253,19 +9253,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\aceun\\.nuget\\packages\\": {}
+    "C:\\Users\\johns\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\aceun\\github\\refactored-parakeet\\parakeet\\parakeet\\parakeet.csproj",
+      "projectUniqueName": "C:\\Users\\johns\\source\\repos\\refactored-parakeet\\parakeet\\parakeet\\parakeet.csproj",
       "projectName": "parakeet",
-      "projectPath": "C:\\Users\\aceun\\github\\refactored-parakeet\\parakeet\\parakeet\\parakeet.csproj",
-      "packagesPath": "C:\\Users\\aceun\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\aceun\\github\\refactored-parakeet\\parakeet\\parakeet\\obj\\",
+      "projectPath": "C:\\Users\\johns\\source\\repos\\refactored-parakeet\\parakeet\\parakeet\\parakeet.csproj",
+      "packagesPath": "C:\\Users\\johns\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\johns\\source\\repos\\refactored-parakeet\\parakeet\\parakeet\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\aceun\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\johns\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9277,7 +9277,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -9289,7 +9288,6 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
             "target": "Package",
@@ -9342,7 +9340,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
       }
     }
   }
