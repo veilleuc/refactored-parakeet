@@ -2134,5 +2134,9 @@ C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp
 C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\parakeet.dll
 C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\parakeet.pdb
 C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\parakeet.genruntimeconfig.cache
+<<<<<<< HEAD
 C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\bin\Debug\netcoreapp3.1\web.config
 C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\AdminRegister.cshtml.g.cs
+=======
+C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\parakeet.csprojAssemblyReference.cache
+>>>>>>> aabe22f4c9a3c9df36a72cc0be8d4b7696ab1bbb
