@@ -2140,3 +2140,4 @@ C:\Users\johns\source\repos\refactored-parakeet\parakeet\parakeet\obj\Debug\netc
 =======
 C:\Users\aceun\github\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\parakeet.csprojAssemblyReference.cache
 >>>>>>> aabe22f4c9a3c9df36a72cc0be8d4b7696ab1bbb
+C:\Users\jdogg\csci540_proj\refactored-parakeet\parakeet\parakeet\obj\Debug\netcoreapp3.1\scopedcss\bundle\parakeet.styles.css

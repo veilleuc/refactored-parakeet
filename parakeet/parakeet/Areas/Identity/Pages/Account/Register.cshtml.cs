@@ -47,13 +47,19 @@ namespace parakeet.Areas.Identity.Pages.Account
 
         public class InputModel
         {
+            [RegularExpression(@"^[a-zA-Z ]*$",
+         ErrorMessage = "Please Enter Valid First Name")]
             [Required]
             [Display(Name = "First Name")]
             public string FirstName { get; set; }
             [Required]
+            [RegularExpression(@"^[a-zA-Z ]*$",
+         ErrorMessage = "Please Enter Valid Last Name")]
             [Display(Name = "Last Name")]
             public string LastName { get; set; }
 
+            [RegularExpression(@"^[a-zA-Z0-9_ ]*$",
+         ErrorMessage = "Please Enter Valid Address")]
             public string Address { get; set; }
 
             [Required]

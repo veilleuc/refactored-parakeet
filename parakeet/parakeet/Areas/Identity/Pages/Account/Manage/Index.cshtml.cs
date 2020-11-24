@@ -33,16 +33,24 @@ namespace parakeet.Areas.Identity.Pages.Account.Manage
 
         public class InputModel
         {
+            [RegularExpression(@"^[a-zA-Z ]*$",
+         ErrorMessage = "Please Enter Valid First Name")]
             [Display(Name = "First Name")]
             public string FirstName { get; set; }
+
+            [RegularExpression(@"^[a-zA-Z ]*$",
+         ErrorMessage = "Please Enter Valid Last Name")]
             [Display(Name = "Last Name")]
             public string LastName { get; set; }
             [Display(Name = "Username")]
             public string Username { get; set; }
             [Phone]
+            [StringLength(9, MinimumLength =9 ,ErrorMessage = "Please Enter valid 9 digit number.")]
             [Display(Name = "Phone number")]
             public string PhoneNumber { get; set; }
 
+            [RegularExpression(@"^[a-zA-Z0-9_ ]*$",
+         ErrorMessage = "Please Enter Valid Address")]
             public string Address { get; set; }
         }
 
@@ -100,7 +108,21 @@ namespace parakeet.Areas.Identity.Pages.Account.Manage
                     return RedirectToPage();
                 }
             }
-
+            if(Input.FirstName != user.FirstName)
+            {
+                user.FirstName = Input.FirstName;
+                await _userManager.UpdateAsync(user);
+            }
+            if(Input.LastName != user.LastName)
+            {
+                user.LastName = Input.LastName;
+                await _userManager.UpdateAsync(user);
+            }
+            if(Input.Address != user.Address)
+            {
+                user.Address = Input.Address;
+                await _userManager.UpdateAsync(user);
+            }
             await _signInManager.RefreshSignInAsync(user);
             StatusMessage = "Your profile has been updated";
             return RedirectToPage();
