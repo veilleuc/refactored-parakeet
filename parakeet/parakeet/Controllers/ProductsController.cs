@@ -79,7 +79,7 @@ namespace parakeet.Controllers
         public IActionResult Index([Bind("Designs, ClothingTypes, Sizes")] ProductsViewModel viewModel)
         {
             //checking if all buttons have been pressed
-            if (ModelState.IsValid && viewModel.Designs > 0 )
+            if (ModelState.IsValid && viewModel.Designs > 0 && viewModel.ClothingTypes != null && viewModel.Sizes != null)
             {
                 //values for the buttons in the view
                 var designvalues = viewModel.Designs;
