@@ -45,7 +45,7 @@ namespace parakeet.Areas.Identity.Pages.Account.Manage
             [Display(Name = "Username")]
             public string Username { get; set; }
             [Phone]
-            [StringLength(9, MinimumLength =9 ,ErrorMessage = "Please Enter valid 9 digit number.")]
+            [StringLength(10, MinimumLength =10 ,ErrorMessage = "Please Enter valid 10 digit number.")]
             [Display(Name = "Phone number")]
             public string PhoneNumber { get; set; }
 
