@@ -115,7 +115,7 @@ namespace parakeet.Controllers
         }
         
         [HttpPost]
-        public ActionResult Checkout([Bind("Address,City,State,Zipcode")] CheckoutViewModel OrderInfo)
+        public ActionResult Checkout([Bind("Address,City,Zipcode")] CheckoutViewModel OrderInfo)
         {
             if (!ModelState.IsValid)
             {
